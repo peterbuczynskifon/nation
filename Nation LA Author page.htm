@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexandra Reid — Senior Editor | Nation Los Angeles</title>
+  <meta name="description" content="Alexandra Reid is a Senior Editor at Nation covering AI, sustainable fashion, and the future of conscious consumption. 47 articles published.">
+  <meta name="robots" content="index,follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── RESET ──────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+      background: #FFFFFF;
+      color: #1A1918;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: inherit; }
+    ul { list-style: none; }
+
+    /* ─── TOKENS ─────────────────────────────────────────────────── */
+    :root {
+      --cream:        #F4F2ED;
+      --cream-mid:    #EDE9E1;
+      --white:        #FFFFFF;
+      --ink:          #1A1918;
+      --stone:        #6A6660;
+      --stone-light:  #9C9890;
+      --border:       #E3DFD9;
+      --border-soft:  #EDEBE6;
+      --font-serif:   'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-sans:    'Jost', 'Helvetica Neue', Arial, sans-serif;
+      --max-w:        1280px;
+      --pad-x:        2rem;
+    }
+
+    /* ─── ANNOUNCEMENT BAR ──────────────────────────────────────── */
+    .ann-bar {
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 0.55rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.09em;
+      color: var(--ink);
+    }
+    .ann-bar a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      margin-right: 0.35rem;
+    }
+
+    /* ─── SITE HEADER ────────────────────────────────────────────── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+      height: 68px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+    .header-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .header-logo-name {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .header-logo-sub {
+      font-size: 0.5rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 2px;
+      text-align: center;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .header-nav a {
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .header-nav a:hover { opacity: 0.45; }
+    .header-nav a.nav-renew { color: var(--stone); }
+    .header-utils {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      justify-content: flex-end;
+    }
+    .util-text {
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--stone);
+      transition: color 0.2s;
+    }
+    .util-text:hover { color: var(--ink); }
+    .util-icon {
+      display: flex;
+      align-items: center;
+      color: var(--ink);
+      background: none;
+      border: none;
+      padding: 0;
+      transition: opacity 0.2s;
+    }
+    .util-icon:hover { opacity: 0.45; }
+    .util-icon svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 1.4; fill: none; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--ink);
+      transition: all 0.3s;
+    }
+
+    /* ─── MOBILE NAV ─────────────────────────────────────────────── */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--white);
+      z-index: 200;
+      flex-direction: column;
+      padding: 2rem;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-close {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--ink);
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      margin-top: 3rem;
+    }
+    .mobile-nav-links a {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+
+    /* ─── BREADCRUMB ─────────────────────────────────────────────── */
+    .breadcrumb {
+      border-bottom: 1px solid var(--border);
+    }
+    .breadcrumb-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0.8rem var(--pad-x);
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.07em;
+      color: var(--stone-light);
+    }
+    .breadcrumb-inner a:hover { color: var(--ink); transition: color 0.2s; }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current { color: var(--stone); }
+
+    /* ─── AUTHOR HERO ────────────────────────────────────────────── */
+    .author-hero {
+      padding: 5.5rem var(--pad-x) 4.5rem;
+      background: var(--white);
+    }
+    .author-hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    /* Photo column */
+    .author-photo-wrap { position: relative; }
+    .author-photo {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .author-photo-figure {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .author-photo-badge {
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 0.8rem 1rem;
+      text-align: right;
+    }
+    .badge-num {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--ink);
+      display: block;
+    }
+    .badge-label {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 3px;
+      display: block;
+    }
+
+    /* Info column */
+    .author-eyebrow {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .author-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--stone-light);
+      flex-shrink: 0;
+    }
+    .author-name {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 5.5vw, 5.25rem);
+      font-weight: 300;
+      line-height: 1.04;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 0.55rem;
+    }
+    .author-name em {
+      font-style: italic;
+    }
+    .author-role {
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 2.25rem;
+    }
+    .author-statement {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--ink);
+      max-width: 500px;
+      padding-left: 1.4rem;
+      border-left: 2px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .author-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 2.5rem;
+    }
+    .author-tag {
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone);
+      border: 1px solid var(--border);
+      padding: 0.32rem 0.8rem;
+      transition: border-color 0.2s, color 0.2s;
+      cursor: default;
+    }
+    .author-tag:hover { border-color: var(--ink); color: var(--ink); }
+    .author-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .author-link {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone);
+      transition: color 0.2s;
+    }
+    .author-link:hover { color: var(--ink); }
+    .author-link svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 1.5; fill: none; }
+    .link-divider { width: 1px; height: 13px; background: var(--border); }
+
+    /* ─── STATS BAR ──────────────────────────────────────────────── */
+    .stats-bar {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-bar-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-cell {
+      padding: 2.25rem 1rem;
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+    .stat-cell:last-child { border-right: 0; }
+    .stat-num {
+      font-family: var(--font-serif);
+      font-size: 2.75rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--ink);
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-top: 0.4rem;
+      display: block;
+    }
+
+    /* ─── SHARED SECTION SHELL ──────────────────────────────────── */
+    .section { padding: 6rem var(--pad-x); }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-eyebrow {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 0.85rem;
+    }
+    .section-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+    .section-heading em { font-style: italic; }
+
+    /* ─── BIO SECTION ────────────────────────────────────────────── */
+    .bio-section { background: var(--white); }
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5.5rem;
+      align-items: start;
+      margin-top: 3.5rem;
+    }
+    .bio-prose p {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--stone);
+      margin-bottom: 1.5rem;
+    }
+    .bio-prose p:first-child {
+      font-size: 1.3rem;
+      color: var(--ink);
+    }
+    .expertise-block { margin-bottom: 3.5rem; }
+    .expertise-heading {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 1.25rem;
+    }
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .expertise-item {
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      padding: 1.25rem 1rem 1.25rem 0;
+    }
+    .expertise-item:nth-child(even) { border-right: 0; padding-left: 1rem; }
+    .expertise-item:nth-child(odd):not(:nth-last-child(-n+2)) { }
+    .expertise-item:nth-last-child(-n+2) { }
+    .exp-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+    .exp-desc {
+      font-size: 0.78rem;
+      color: var(--stone);
+      line-height: 1.55;
+    }
+    .timeline-heading {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 0.5rem;
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 1.25rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .timeline-item:last-child { border-bottom: 0; }
+    .tl-year {
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--stone-light);
+      padding-top: 2px;
+    }
+    .tl-title {
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+    .tl-sub {
+      font-size: 0.76rem;
+      color: var(--stone);
+    }
+
+    /* ─── ARTICLES SECTION ───────────────────────────────────────── */
+    .articles-section { background: var(--cream); }
+    .articles-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+    }
+    .view-all {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: color 0.2s, gap 0.2s;
+      flex-shrink: 0;
+      padding-bottom: 0.15rem;
+    }
+    .view-all:hover { color: var(--ink); gap: 0.7rem; }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .article-card {
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      transition: background 0.25s;
+    }
+    .article-card:hover { background: #FDFCFA; }
+    .card-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+    .card-img-fill {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.55s ease;
+    }
+    .article-card:hover .card-img-fill { transform: scale(1.03); }
+    .card-body {
+      padding: 1.5rem 1.75rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-category {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 0.7rem;
+    }
+    .card-title {
+      font-family: var(--font-serif);
+      font-size: 1.18rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 0.7rem;
+      flex: 1;
+      transition: opacity 0.2s;
+    }
+    .article-card:hover .card-title { opacity: 0.75; }
+    .card-excerpt {
+      font-size: 0.79rem;
+      line-height: 1.65;
+      color: var(--stone);
+      margin-bottom: 1.4rem;
+    }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.63rem;
+      letter-spacing: 0.06em;
+      color: var(--stone-light);
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+    .card-meta { display: flex; align-items: center; gap: 0.65rem; }
+    .card-sep { color: var(--border); }
+    .card-read {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.2s, gap 0.2s;
+    }
+    .article-card:hover .card-read { color: var(--ink); gap: 0.5rem; }
+
+    /* ─── FEATURED IN ────────────────────────────────────────────── */
+    .feat-section {
+      background: var(--white);
+      padding: 4rem var(--pad-x);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .feat-inner { max-width: var(--max-w); margin: 0 auto; }
+    .feat-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .feat-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.5rem;
+      flex-wrap: wrap;
+    }
+    .feat-logo {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--stone-light);
+      transition: color 0.2s;
+      cursor: default;
+    }
+    .feat-logo:hover { color: var(--ink); }
+
+    /* ─── PULL QUOTE ─────────────────────────────────────────────── */
+    .quote-section {
+      background: var(--ink);
+      padding: 7rem var(--pad-x);
+    }
+    .quote-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .quote-mark {
+      font-family: var(--font-serif);
+      font-size: 7rem;
+      line-height: 0.5;
+      font-weight: 300;
+      color: rgba(255,255,255,0.1);
+      display: block;
+      margin-bottom: 2rem;
+      user-select: none;
+    }
+    .quote-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.45rem, 2.8vw, 2.4rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2.5rem;
+    }
+    .quote-attr {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ─── NEWSLETTER ─────────────────────────────────────────────── */
+    .nl-section {
+      background: var(--cream);
+      padding: 5.5rem var(--pad-x);
+    }
+    .nl-inner {
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .nl-eyebrow {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 1.2rem;
+    }
+    .nl-heading {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 0.65rem;
+    }
+    .nl-heading em { font-style: italic; }
+    .nl-sub {
+      font-size: 0.82rem;
+      color: var(--stone);
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
+    }
+    .nl-form { display: flex; flex-direction: column; align-items: center; }
+    .nl-input-row {
+      width: 100%;
+      position: relative;
+      border-bottom: 1px solid var(--stone);
+      margin-bottom: 1.25rem;
+    }
+    .nl-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 0.7rem 6rem 0.7rem 0;
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+    }
+    .nl-input:focus { outline: none; }
+    .nl-input::placeholder {
+      color: var(--stone-light);
+      letter-spacing: 0.1em;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+    .nl-btn {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: gap 0.2s;
+    }
+    .nl-btn:hover { gap: 0.6rem; }
+    .nl-fine {
+      font-size: 0.62rem;
+      color: var(--stone-light);
+      letter-spacing: 0.03em;
+    }
+    .nl-fine a { text-decoration: underline; text-underline-offset: 2px; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+    .footer-top {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 4rem var(--pad-x) 3rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4.5rem;
+      align-items: start;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-email-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 0.65rem;
+    }
+    .footer-email-row {
+      position: relative;
+      border-bottom: 1px solid var(--stone);
+    }
+    .footer-email-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 0.65rem 9rem 0.65rem 0;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+    }
+    .footer-email-input:focus { outline: none; }
+    .footer-email-input::placeholder {
+      color: var(--stone-light);
+      font-size: 0.7rem;
+    }
+    .footer-email-btn {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      white-space: nowrap;
+      transition: gap 0.2s;
+    }
+    .footer-email-btn:hover { gap: 0.55rem; }
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+    }
+    .footer-col-title {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.65rem; }
+    .footer-col ul a {
+      font-size: 0.76rem;
+      color: var(--stone);
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--ink); }
+    .live-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #5C9E6E;
+      border-radius: 50%;
+      margin-right: 0.35rem;
+      position: relative;
+      top: -1px;
+    }
+    .footer-bottom {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2.75rem var(--pad-x) 2.5rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .footer-tagline-main {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.2;
+      display: block;
+    }
+    .footer-tagline-sub {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.2;
+      display: block;
+    }
+    .footer-legal {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .footer-legal a,
+    .footer-legal span {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+    }
+    .footer-legal a:hover { color: var(--ink); transition: color 0.2s; }
+    .legal-sep { color: var(--border) !important; }
+
+    /* ─── SCROLL FADE ────────────────────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .author-hero-inner { grid-template-columns: 260px 1fr; gap: 3.5rem; }
+      .bio-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .articles-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-cols { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      :root { --pad-x: 1.5rem; }
+      .header-nav { display: none; }
+      .util-text { display: none; }
+      .hamburger { display: flex; }
+      .author-hero { padding: 3rem var(--pad-x); }
+      .author-hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .author-photo { max-width: 220px; }
+      .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat-cell:nth-child(2) { border-right: 0; }
+      .section { padding: 4rem var(--pad-x); }
+      .articles-grid { grid-template-columns: 1fr; }
+      .articles-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .expertise-item { border-right: 0; padding-left: 0; }
+      .expertise-item:nth-child(even) { padding-left: 0; }
+      .footer-top { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-cols { grid-template-columns: repeat(2, 1fr); }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 2rem; padding-top: 2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .feat-logos { gap: 2rem; }
+      .footer-cols { grid-template-columns: 1fr 1fr; }
+      .author-links { flex-wrap: wrap; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       ANNOUNCEMENT BAR
+  ══════════════════════════════════════════════════════════════════ -->
+  <div class="ann-bar" role="banner">
+    <a href="#">SHOP BASICS</a> Familiar favorites, made to last.
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SITE HEADER
+  ══════════════════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="/" class="header-logo" aria-label="Nation Los Angeles home">
+        <span class="header-logo-name">Nation</span>
+        <span class="header-logo-sub">Los Angeles</span>
+      </a>
+
+      <!-- Primary nav -->
+      <nav class="header-nav" aria-label="Primary">
+        <a href="#">New</a>
+        <a href="#">Core</a>
+        <a href="#">Icons</a>
+        <a href="#">Clothing</a>
+        <a href="#" class="nav-renew">(Renew)</a>
+        <a href="#">About</a>
+      </nav>
+
+      <!-- Utilities -->
+      <div class="header-utils">
+        <button class="util-icon" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <a href="#" class="util-text">PL&nbsp;/&nbsp;ZŁ</a>
+        <a href="#" class="util-text">HELP</a>
+        <a href="#" class="util-text">SIGN IN</a>
+        <button class="util-icon" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       MOBILE NAV OVERLAY
+  ══════════════════════════════════════════════════════════════════ -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Close menu">×</button>
+    <ul class="mobile-nav-links">
+      <li><a href="#">New</a></li>
+      <li><a href="#">Core</a></li>
+      <li><a href="#">Icons</a></li>
+      <li><a href="#">Clothing</a></li>
+      <li><a href="#" style="color:var(--stone)">(Renew)</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════════════════════════ -->
+  <main>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb-inner">
+        <a href="#">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="#">Stories</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="#">Authors</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">Alexandra Reid</span>
+      </div>
+    </nav>
+
+    <!-- ── HERO ─────────────────────────────────────────────────── -->
+    <section class="author-hero" aria-labelledby="author-name">
+      <div class="author-hero-inner">
+
+        <!-- Portrait column -->
+        <div class="author-photo-wrap">
+          <div class="author-photo" role="img" aria-label="Author portrait of Alexandra Reid">
+            <!-- Elegant editorial portrait silhouette -->
+            <svg class="author-photo-figure" width="270" height="380" viewBox="0 0 270 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Shadow base -->
+              <ellipse cx="135" cy="372" rx="88" ry="14" fill="#D6D0C8" opacity="0.4"/>
+              <!-- Garment body -->
+              <path d="M55 380 L55 248 Q55 205 98 190 L135 180 L172 190 Q215 205 215 248 L215 380 Z" fill="#C6C0B8"/>
+              <!-- Neck -->
+              <rect x="119" y="160" width="32" height="28" rx="5" fill="#CEBFB4"/>
+              <!-- Head -->
+              <ellipse cx="135" cy="133" rx="50" ry="58" fill="#CEBFB4"/>
+              <!-- Hair — rich warm tone -->
+              <path d="M85 128 Q84 68 135 64 Q186 68 185 128 Q176 92 135 90 Q94 92 85 128Z" fill="#7A6A5E"/>
+              <path d="M85 128 Q80 155 83 178 L94 158 Q85 142 85 128Z" fill="#7A6A5E"/>
+              <path d="M185 128 Q190 155 187 178 L176 158 Q185 142 185 128Z" fill="#7A6A5E"/>
+              <!-- Subtle collar -->
+              <path d="M119 188 Q135 196 151 188 L148 180 Q135 186 122 180Z" fill="#B8AFA6" opacity="0.6"/>
+            </svg>
+            <div class="author-photo-badge">
+              <span class="badge-num">47</span>
+              <span class="badge-label">Articles</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info column -->
+        <div class="author-info">
+          <div class="author-eyebrow">Senior Editor</div>
+
+          <h1 class="author-name" id="author-name">
+            Alexandra<br><em>Reid</em>
+          </h1>
+
+          <p class="author-role">AI &amp; Sustainable Fashion · Nation Los Angeles</p>
+
+          <p class="author-statement">
+            Writing at the intersection of artificial intelligence, sustainable materials, and the quiet revolution in conscious fashion — for readers who believe what you wear says something about who you are.
+          </p>
+
+          <div class="author-tags" role="list" aria-label="Areas of expertise">
+            <span class="author-tag" role="listitem">Sustainable Fashion</span>
+            <span class="author-tag" role="listitem">AI in Retail</span>
+            <span class="author-tag" role="listitem">Conscious Consumption</span>
+            <span class="author-tag" role="listitem">Bio-Materials</span>
+            <span class="author-tag" role="listitem">Slow Fashion</span>
+            <span class="author-tag" role="listitem">Circular Economy</span>
+          </div>
+
+          <div class="author-links">
+            <a href="#" class="author-link" aria-label="LinkedIn profile">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <span class="link-divider" aria-hidden="true"></span>
+            <a href="#" class="author-link" aria-label="Follow on X">
+              <svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 L4 20" stroke-linecap="round"/></svg>
+              Follow
+            </a>
+            <span class="link-divider" aria-hidden="true"></span>
+            <a href="mailto:a.reid@nation.la" class="author-link" aria-label="Send email">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+              Contact
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── STATS BAR ────────────────────────────────────────────── -->
+    <div class="stats-bar" role="region" aria-label="Author statistics">
+      <div class="stats-bar-inner">
+        <div class="stat-cell fade-in">
+          <span class="stat-num">47</span>
+          <span class="stat-label">Articles Published</span>
+        </div>
+        <div class="stat-cell fade-in" style="transition-delay:.08s">
+          <span class="stat-num">1.2M</span>
+          <span class="stat-label">Readers Reached</span>
+        </div>
+        <div class="stat-cell fade-in" style="transition-delay:.16s">
+          <span class="stat-num">8</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-cell fade-in" style="transition-delay:.24s">
+          <span class="stat-num">12</span>
+          <span class="stat-label">Awards &amp; Features</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── BIO ──────────────────────────────────────────────────── -->
+    <section class="section bio-section" aria-labelledby="bio-heading">
+      <div class="section-inner">
+        <div class="section-eyebrow">Biography</div>
+        <h2 class="section-heading" id="bio-heading">About <em>the author</em></h2>
+
+        <div class="bio-grid">
+
+          <!-- Prose -->
+          <div class="bio-prose fade-in">
+            <p>Alexandra Reid is a senior editor and fashion journalist whose work explores the converging worlds of artificial intelligence, sustainable production, and the human desire to dress with intention. Based in Los Angeles, she has spent eight years reporting for some of fashion's most respected editorial voices.</p>
+            <p>Before joining Nation, Alexandra served as a contributing editor at Vogue Business and The Business of Fashion, where her long-form investigations into supply chain transparency and material innovation earned wide recognition. Her 2022 investigation into greenwashing in the fast fashion sector was cited by three legislative bodies.</p>
+            <p>She approaches fashion not as a frivolous pursuit but as a profound cultural signal — a lens through which we understand identity, economics, technology, and the environment simultaneously. Her writing is known for making complex systems feel personal and urgent.</p>
+          </div>
+
+          <!-- Meta: expertise + timeline -->
+          <div class="fade-in" style="transition-delay:.1s">
+            <div class="expertise-block">
+              <div class="expertise-heading">Areas of Expertise</div>
+              <div class="expertise-grid">
+                <div class="expertise-item">
+                  <div class="exp-title">Sustainable Materials</div>
+                  <div class="exp-desc">Bio-fabricated textiles, regenerative fibers, and ethical sourcing science.</div>
+                </div>
+                <div class="expertise-item">
+                  <div class="exp-title">AI in Fashion</div>
+                  <div class="exp-desc">Generative design tools, predictive trends, and supply chain automation.</div>
+                </div>
+                <div class="expertise-item">
+                  <div class="exp-title">Circular Economy</div>
+                  <div class="exp-desc">Resale markets, repair culture, and brand end-of-life programs.</div>
+                </div>
+                <div class="expertise-item">
+                  <div class="exp-title">Brand Strategy</div>
+                  <div class="exp-desc">How values-led brands communicate without compromising commercial viability.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-heading">Career Timeline</div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="tl-year">2023–</div>
+                <div>
+                  <div class="tl-title">Senior Editor, Nation Los Angeles</div>
+                  <div class="tl-sub">AI, sustainability, and the future of conscious fashion.</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tl-year">2020–23</div>
+                <div>
+                  <div class="tl-title">Contributing Editor, Vogue Business</div>
+                  <div class="tl-sub">Supply chain, sustainability, and technology reporting.</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tl-year">2018–20</div>
+                <div>
+                  <div class="tl-title">Staff Writer, Business of Fashion</div>
+                  <div class="tl-sub">Retail innovation and emerging designer profiles.</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="tl-year">2016–18</div>
+                <div>
+                  <div class="tl-title">Editorial Fellow, WGSN</div>
+                  <div class="tl-sub">Global trend forecasting and material research.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ARTICLES ─────────────────────────────────────────────── -->
+    <section class="section articles-section" aria-labelledby="articles-heading">
+      <div class="section-inner">
+        <div class="articles-header">
+          <div>
+            <div class="section-eyebrow">Selected Writing</div>
+            <h2 class="section-heading" id="articles-heading">Featured <em>Articles</em></h2>
+          </div>
+          <a href="#" class="view-all">View all 47 →</a>
+        </div>
+
+        <div class="articles-grid">
+
+          <!-- Card 1 -->
+          <article class="article-card fade-in">
+            <div class="card-img">
+              <div class="card-img-fill" style="background:linear-gradient(140deg,#D4CFC8 0%,#C0BAB2 100%)"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">AI &amp; Design</div>
+              <h3 class="card-title">The Algorithm and the Atelier: How AI is Reshaping Fashion's Creative Core</h3>
+              <p class="card-excerpt">From generative moodboards to predictive pattern-making, artificial intelligence is not replacing the designer — it is becoming the designer's most interesting collaborator.</p>
+              <div class="card-footer">
+                <div class="card-meta">
+                  <span>May 2025</span>
+                  <span class="card-sep">·</span>
+                  <span>8 min</span>
+                </div>
+                <span class="card-read">Read →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="article-card fade-in" style="transition-delay:.07s">
+            <div class="card-img">
+              <div class="card-img-fill" style="background:linear-gradient(140deg,#C6C0B8 0%,#B4AEA6 100%)"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Materials</div>
+              <h3 class="card-title">Fabric Forward: The Bio-Materials Quietly Redefining What Luxury Means</h3>
+              <p class="card-excerpt">Mycelium leather, algae silk, fermented cashmere. A new generation of materials scientists is building the wardrobe of tomorrow from living organisms.</p>
+              <div class="card-footer">
+                <div class="card-meta">
+                  <span>Apr 2025</span>
+                  <span class="card-sep">·</span>
+                  <span>11 min</span>
+                </div>
+                <span class="card-read">Read →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="article-card fade-in" style="transition-delay:.14s">
+            <div class="card-img">
+              <div class="card-img-fill" style="background:linear-gradient(140deg,#DEDAD3 0%,#CAC6BF 100%)"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Slow Fashion</div>
+              <h3 class="card-title">The Quiet Revolution: Why the Most Radical Fashion Statement Is Buying Less</h3>
+              <p class="card-excerpt">In an era of instantaneous everything, a growing cohort of consumers is choosing restraint — and the brands serving them are building something far more durable than trend cycles.</p>
+              <div class="card-footer">
+                <div class="card-meta">
+                  <span>Mar 2025</span>
+                  <span class="card-sep">·</span>
+                  <span>9 min</span>
+                </div>
+                <span class="card-read">Read →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="article-card fade-in" style="transition-delay:.05s">
+            <div class="card-img">
+              <div class="card-img-fill" style="background:linear-gradient(140deg,#C8C2BA 0%,#B8B2AA 100%)"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Sustainability</div>
+              <h3 class="card-title">Carbon Costs: The True Environmental Weight of Your Wardrobe, Quantified</h3>
+              <p class="card-excerpt">We worked with three independent environmental researchers to calculate what a typical American closet costs the planet. The numbers are not comfortable reading.</p>
+              <div class="card-footer">
+                <div class="card-meta">
+                  <span>Feb 2025</span>
+                  <span class="card-sep">·</span>
+                  <span>14 min</span>
+                </div>
+                <span class="card-read">Read →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="article-card fade-in" style="transition-delay:.12s">
+            <div class="card-img">
+              <div class="card-img-fill" style="background:linear-gradient(140deg,#D0CAC2 0%,#C2BCB4 100%)"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Brand Profile</div>
+              <h3 class="card-title">Intentional at Every Step: Nation's Philosophy of Making Less, Better</h3>
+              <p class="card-excerpt">An inside look at how Nation LTD built a following by refusing to chase trends, and why their deliberate pace has become their greatest competitive advantage.</p>
+              <div class="card-footer">
+                <div class="card-meta">
+                  <span>Jan 2025</span>
+                  <span class="card-sep">·</span>
+                  <span>7 min</span>
+                </div>
+                <span class="card-read">Read →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="article-card fade-in" style="transition-delay:.19s">
+            <div class="card-img">
+              <div class="card-img-fill" style="background:linear-gradient(140deg,#E0DCD5 0%,#D0CCC5 100%)"></div>
+            </div>
+            <div class="card-body">
+              <div class="card-category">Industry</div>
+              <h3 class="card-title">Why the Most Interesting Fashion Brands Are Becoming Media Companies</h3>
+              <p class="card-excerpt">The editorial turn in fashion branding is not a marketing stunt. It is a structural shift in how values-led companies build lasting relationships with their audience.</p>
+              <div class="card-footer">
+                <div class="card-meta">
+                  <span>Dec 2024</span>
+                  <span class="card-sep">·</span>
+                  <span>10 min</span>
+                </div>
+                <span class="card-read">Read →</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURED IN ───────────────────────────────────────────── -->
+    <div class="feat-section" role="region" aria-label="Featured in">
+      <div class="feat-inner">
+        <p class="feat-label">As featured in</p>
+        <div class="feat-logos">
+          <span class="feat-logo">Vogue Business</span>
+          <span class="feat-logo">Business of Fashion</span>
+          <span class="feat-logo">The New York Times</span>
+          <span class="feat-logo">WGSN</span>
+          <span class="feat-logo">Dezeen</span>
+          <span class="feat-logo">WWD</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PULL QUOTE ────────────────────────────────────────────── -->
+    <div class="quote-section" role="region" aria-label="Author insight">
+      <div class="quote-inner">
+        <span class="quote-mark" aria-hidden="true">"</span>
+        <blockquote class="quote-text">
+          Fashion is never just about fabric and silhouette. It is always, at its deepest level, about what we believe — about the planet, about ourselves, about the kind of future we think is worth building toward.
+        </blockquote>
+        <p class="quote-attr">Alexandra Reid — On Fashion as Philosophy</p>
+      </div>
+    </div>
+
+    <!-- ── NEWSLETTER ────────────────────────────────────────────── -->
+    <section class="nl-section" aria-labelledby="nl-heading">
+      <div class="nl-inner">
+        <p class="nl-eyebrow">Stay informed</p>
+        <h2 class="nl-heading" id="nl-heading">Thoughtful <em>fashion writing,</em><br>delivered weekly.</h2>
+        <p class="nl-sub">Join 24,000 readers who receive Alexandra's curated perspective on sustainability, AI, and the brands making things with intention.</p>
+        <form class="nl-form" id="nl-form" novalidate>
+          <div class="nl-input-row">
+            <input
+              type="email"
+              class="nl-input"
+              id="nl-email"
+              placeholder="Enter email"
+              required
+              aria-label="Email address"
+              autocomplete="email"
+            >
+            <button type="submit" class="nl-btn">Subscribe →</button>
+          </div>
+          <p class="nl-fine">No spam. Unsubscribe anytime. Read our <a href="#">privacy policy</a>.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FOOTER  (matching Nation LA exactly)
+  ══════════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+
+    <div class="footer-top">
+
+      <!-- Email signup column -->
+      <div>
+        <p class="footer-email-label">Enter Email</p>
+        <div class="footer-email-row">
+          <input
+            type="email"
+            class="footer-email-input"
+            placeholder="your@email.com"
+            aria-label="Email for 15% off"
+            autocomplete="email"
+          >
+          <button class="footer-email-btn" type="button">Sign up for 15% off →</button>
+        </div>
+      </div>
+
+      <!-- Link columns -->
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="footer-col-title">About</div>
+          <ul>
+            <li><a href="#">Our History</a></li>
+            <li><a href="#">Our Ethos</a></li>
+            <li><a href="#">Our Impact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Materials</div>
+          <ul>
+            <li><a href="#">Our Fabrics</a></li>
+            <li><a href="#">How It's Made</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Help</div>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#"><span class="live-dot" aria-hidden="true"></span>Live Chat (9am–5pm PST)</a></li>
+            <li><a href="#">Returns &amp; Exchanges</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Account</div>
+          <ul>
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">E-Gift Card</a></li>
+            <li><a href="#">Wholesale</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Follow</div>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-tagline">
+        <span class="footer-tagline-main">Understated confidence.</span>
+        <span class="footer-tagline-sub">Intentional at every step.</span>
+      </div>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <span class="legal-sep">/</span>
+        <a href="#">Terms</a>
+        <span class="legal-sep">/</span>
+        <a href="#">Accessibility</a>
+        <span>©2026 Nation LA</span>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════════════════════════════ -->
+  <script>
+    /* ── Mobile nav ───────────────────────────────────────────── */
+    const hamburger   = document.getElementById('hamburger');
+    const mobileNav   = document.getElementById('mobile-nav');
+    const mobileClose = document.getElementById('mobile-close');
+
+    function openNav() {
+      mobileNav.classList.add('open');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeNav() {
+      mobileNav.classList.remove('open');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', openNav);
+    mobileClose.addEventListener('click', closeNav);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+
+    /* ── Newsletter form ──────────────────────────────────────── */
+    document.getElementById('nl-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const input = this.querySelector('input');
+      const btn   = this.querySelector('button');
+      if (!input.value) return;
+      btn.textContent = 'Subscribed ✓';
+      btn.style.color = '#5C9E6E';
+      input.value = '';
+      input.disabled = true;
+      btn.disabled = true;
+    });
+
+    /* ── Scroll-triggered fade-in ─────────────────────────────── */
+    const fadeEls = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    /* Also fade in article cards with stagger */
+    document.querySelectorAll('.article-card').forEach((el, i) => {
+      el.classList.add('fade-in');
+      el.style.transitionDelay = (i % 3 * 0.07) + 's';
+      observer.observe(el);
+    });
+
+    /* ── Subtle header shadow on scroll ───────────────────────── */
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.style.boxShadow = '0 1px 12px rgba(0,0,0,0.06)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
