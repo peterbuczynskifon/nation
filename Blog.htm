@@ -1,0 +1,2347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Quiet Power of Pima — Nation Los Angeles</title>
+  <meta name="description" content="Why a single cotton variety has become fashion's most considered material — and what it tells us about the future of premium basics.">
+  <meta name="robots" content="index,follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── RESET ──────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Jost', 'Helvetica Neue', Arial, sans-serif;
+      background: #FFFFFF;
+      color: #1A1918;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: inherit; }
+    ul { list-style: none; }
+    :focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
+
+    /* ─── TOKENS ─────────────────────────────────────────────────── */
+    :root {
+      --cream:        #F4F2ED;
+      --cream-mid:    #EDE9E1;
+      --cream-deep:   #E7E2D8;
+      --white:        #FFFFFF;
+      --ink:          #1A1918;
+      --stone:        #6A6660;
+      --stone-light:  #9C9890;
+      --border:       #E3DFD9;
+      --border-soft:  #EDEBE6;
+      --accent:       #5C9E6E;
+      --font-serif:   'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-sans:    'Jost', 'Helvetica Neue', Arial, sans-serif;
+      --max-w:        1280px;
+      --max-w-article:1180px;
+      --pad-x:        2rem;
+    }
+
+    /* ─── ANNOUNCEMENT BAR ──────────────────────────────────────── */
+    .ann-bar {
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 0.55rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.09em;
+      color: var(--ink);
+    }
+    .ann-bar a {
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      margin-right: 0.35rem;
+    }
+
+    /* ─── SITE HEADER ────────────────────────────────────────────── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: saturate(140%) blur(10px);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    .header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+      height: 68px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+    .header-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .header-logo-name {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .header-logo-sub {
+      font-size: 0.5rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 2px;
+      text-align: center;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .header-nav a {
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .header-nav a:hover { opacity: 0.45; }
+    .header-nav a.nav-renew { color: var(--stone); }
+    .header-utils {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      justify-content: flex-end;
+    }
+    .util-text {
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--stone);
+      transition: color 0.2s;
+    }
+    .util-text:hover { color: var(--ink); }
+    .util-icon {
+      display: flex;
+      align-items: center;
+      color: var(--ink);
+      background: none;
+      border: none;
+      padding: 0;
+      transition: opacity 0.2s;
+    }
+    .util-icon:hover { opacity: 0.45; }
+    .util-icon svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 1.4; fill: none; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--ink);
+      transition: all 0.3s;
+    }
+
+    /* ─── READING PROGRESS BAR ──────────────────────────────────── */
+    .progress-track {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: transparent;
+    }
+    .progress-fill {
+      height: 100%;
+      width: 0;
+      background: var(--ink);
+      transition: width 0.08s linear;
+    }
+
+    /* ─── MOBILE NAV ─────────────────────────────────────────────── */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--white);
+      z-index: 200;
+      flex-direction: column;
+      padding: 2rem;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-close {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--ink);
+    }
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      margin-top: 3rem;
+    }
+    .mobile-nav-links a {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+    }
+
+    /* ─── BREADCRUMB ─────────────────────────────────────────────── */
+    .breadcrumb {
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .breadcrumb-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0.85rem var(--pad-x);
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.07em;
+      color: var(--stone-light);
+    }
+    .breadcrumb-inner a:hover { color: var(--ink); transition: color 0.2s; }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-current {
+      color: var(--stone);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 60%;
+    }
+
+    /* ─── ARTICLE HERO ──────────────────────────────────────────── */
+    .article-hero {
+      padding: 4.5rem var(--pad-x) 3.5rem;
+      background: var(--white);
+    }
+    .article-hero-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 2rem;
+    }
+    .hero-category::before,
+    .hero-category::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--stone-light);
+    }
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5.5vw, 4.6rem);
+      font-weight: 300;
+      line-height: 1.06;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 1.6rem;
+    }
+    .hero-headline em { font-style: italic; font-weight: 400; }
+    .hero-standfirst {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.55;
+      color: var(--stone);
+      max-width: 640px;
+      margin: 0 auto 2.5rem;
+    }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+    .hero-meta .meta-dot {
+      width: 3px; height: 3px; border-radius: 50%;
+      background: var(--stone-light);
+    }
+    .hero-author-mini {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .hero-author-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .hero-author-avatar svg { width: 100%; height: 100%; display: block; }
+    .hero-author-mini a {
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+    .hero-share {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+    .share-btn {
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--stone);
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .share-btn:hover { color: var(--ink); border-color: var(--ink); }
+    .share-btn svg { width: 13px; height: 13px; stroke: currentColor; stroke-width: 1.5; fill: none; }
+
+    /* ─── FEATURED IMAGE ────────────────────────────────────────── */
+    .hero-image {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+    }
+    .hero-image-frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image-art {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(255,255,255,0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(0,0,0,0.04) 0%, transparent 60%),
+        linear-gradient(135deg, #E8E3DA 0%, #D4CDC1 50%, #BEB6A7 100%);
+    }
+    .hero-image-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem 1.75rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.35), transparent);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.66rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .hero-image-overlay::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: rgba(255,255,255,0.6);
+    }
+
+    /* Cotton illustration overlay */
+    .hero-cotton {
+      position: absolute;
+      bottom: 14%;
+      right: 8%;
+      width: clamp(140px, 25%, 280px);
+      opacity: 0.55;
+    }
+    .hero-cotton svg { width: 100%; height: auto; }
+
+    /* ─── ARTICLE LAYOUT ────────────────────────────────────────── */
+    .article-wrap {
+      max-width: var(--max-w-article);
+      margin: 0 auto;
+      padding: 5rem var(--pad-x) 4rem;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    /* ─── SIDEBAR ───────────────────────────────────────────────── */
+    .sidebar {
+      position: sticky;
+      top: 92px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      padding-right: 0.5rem;
+    }
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--border); }
+    .sidebar::-webkit-scrollbar-track { background: transparent; }
+
+    .sidebar-block { margin-bottom: 3rem; }
+    .sidebar-block:last-child { margin-bottom: 0; }
+
+    .sidebar-eyebrow {
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Table of contents */
+    .toc-list { display: flex; flex-direction: column; }
+    .toc-link {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.55rem 0;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: var(--stone);
+      transition: color 0.25s;
+      position: relative;
+    }
+    .toc-num {
+      font-family: var(--font-serif);
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--stone-light);
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+      padding-top: 1px;
+      transition: color 0.25s;
+    }
+    .toc-text {
+      transition: transform 0.25s, color 0.25s;
+    }
+    .toc-link::before {
+      content: '';
+      position: absolute;
+      left: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 0;
+      background: var(--ink);
+      transition: height 0.3s ease;
+    }
+    .toc-link:hover { color: var(--ink); }
+    .toc-link:hover .toc-num { color: var(--ink); }
+    .toc-link.active {
+      color: var(--ink);
+    }
+    .toc-link.active .toc-num { color: var(--ink); }
+    .toc-link.active::before { height: 60%; }
+
+    /* Tags */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .tag-pill {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.7rem;
+      transition: border-color 0.2s, color 0.2s;
+      cursor: default;
+    }
+    .tag-pill:hover { border-color: var(--ink); color: var(--ink); }
+
+    /* Sidebar newsletter */
+    .sb-nl {
+      background: var(--cream);
+      padding: 1.5rem 1.25rem;
+      border: 1px solid var(--border);
+    }
+    .sb-nl-heading {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .sb-nl-heading em { font-style: italic; }
+    .sb-nl-sub {
+      font-size: 0.72rem;
+      color: var(--stone);
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+    .sb-nl-row {
+      position: relative;
+      border-bottom: 1px solid var(--stone);
+    }
+    .sb-nl-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 0.5rem 2rem 0.5rem 0;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      color: var(--ink);
+    }
+    .sb-nl-input::placeholder {
+      color: var(--stone-light);
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .sb-nl-input:focus { outline: none; }
+    .sb-nl-btn {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--ink);
+      padding: 0;
+    }
+    .sb-nl-btn svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 1.5; fill: none; }
+
+    /* Sidebar shop teaser */
+    .sb-shop { border: 1px solid var(--border); }
+    .sb-shop-img {
+      aspect-ratio: 4 / 5;
+      background: linear-gradient(140deg, #EFEAE1 0%, #DDD5C7 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .sb-shop-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 60%, rgba(255,255,255,0.25), transparent 60%);
+    }
+    .sb-shop-svg {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+    }
+    .sb-shop-body { padding: 1rem 1.1rem 1.25rem; }
+    .sb-shop-cat {
+      font-size: 0.55rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 0.4rem;
+    }
+    .sb-shop-title {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 0.65rem;
+    }
+    .sb-shop-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      transition: gap 0.2s;
+    }
+    .sb-shop-cta:hover { gap: 0.6rem; }
+
+    /* ─── ARTICLE CONTENT ───────────────────────────────────────── */
+    .article {
+      max-width: 680px;
+      font-size: 1.02rem;
+      line-height: 1.85;
+      color: var(--ink);
+    }
+    .article > * + * { margin-top: 1.4rem; }
+
+    /* Drop cap on first paragraph */
+    .article .lede {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+    .article .lede::first-letter {
+      font-family: var(--font-serif);
+      font-size: 4.5rem;
+      font-weight: 400;
+      line-height: 0.85;
+      float: left;
+      padding: 0.15rem 0.65rem 0 0;
+      color: var(--ink);
+    }
+
+    .article p {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: #2A2826;
+    }
+
+    .article h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 400;
+      line-height: 1.18;
+      color: var(--ink);
+      letter-spacing: -0.005em;
+      margin-top: 4rem;
+      margin-bottom: 0.5rem;
+      scroll-margin-top: 100px;
+    }
+    .article h2 em { font-style: italic; }
+    .article h2 .h2-num {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 1rem;
+    }
+
+    .article h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-top: 2.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .article strong {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .article em { font-style: italic; }
+
+    .article a.inline-link {
+      color: var(--ink);
+      border-bottom: 1px solid var(--stone-light);
+      padding-bottom: 1px;
+      transition: border-color 0.2s;
+    }
+    .article a.inline-link:hover { border-color: var(--ink); }
+
+    /* Article lists */
+    .article ul.editorial-list,
+    .article ol.editorial-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 1.4rem 0;
+    }
+    .article ul.editorial-list li {
+      font-family: var(--font-serif);
+      font-size: 1.13rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #2A2826;
+      padding-left: 1.8rem;
+      position: relative;
+      margin-bottom: 0.85rem;
+    }
+    .article ul.editorial-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85em;
+      width: 14px;
+      height: 1px;
+      background: var(--stone);
+    }
+    .article ol.editorial-list { counter-reset: ed-counter; }
+    .article ol.editorial-list li {
+      font-family: var(--font-serif);
+      font-size: 1.13rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #2A2826;
+      padding-left: 2.4rem;
+      position: relative;
+      margin-bottom: 1rem;
+      counter-increment: ed-counter;
+    }
+    .article ol.editorial-list li::before {
+      content: counter(ed-counter, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 0.4em;
+      font-family: var(--font-serif);
+      font-size: 0.78rem;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--stone-light);
+      letter-spacing: 0.05em;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: 3.5rem -1rem;
+      padding: 0.5rem 0 0.5rem 2.5rem;
+      border-left: 2px solid var(--ink);
+      position: relative;
+    }
+    .pull-quote::before {
+      content: '"';
+      position: absolute;
+      left: 2.2rem;
+      top: -0.8rem;
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      line-height: 1;
+      color: var(--cream-deep);
+      z-index: -1;
+    }
+    .pull-quote-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.55rem, 2.3vw, 1.95rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+    .pull-quote-attr {
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .pull-quote-attr::before {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: var(--stone);
+    }
+
+    /* Why it matters callout */
+    .callout {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 2rem 2rem 2.1rem;
+      margin: 3rem 0;
+    }
+    .callout-eyebrow {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .callout-eyebrow svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 1.4; fill: none; }
+    .callout-heading {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 0.85rem;
+    }
+    .callout-heading em { font-style: italic; }
+    .callout-body {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--stone);
+    }
+
+    /* Statistic module */
+    .stat-module {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 3rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-cell {
+      padding: 1.75rem 1rem;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .stat-cell:last-child { border-right: 0; }
+    .stat-num {
+      font-family: var(--font-serif);
+      font-size: 2.25rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--ink);
+      display: block;
+    }
+    .stat-num em { font-style: italic; }
+    .stat-num .stat-unit {
+      font-size: 0.95rem;
+      vertical-align: top;
+      margin-left: 2px;
+      color: var(--stone);
+    }
+    .stat-label {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-top: 0.5rem;
+      display: block;
+    }
+
+    /* Inline image figure */
+    .article-figure {
+      margin: 3rem 0;
+    }
+    .article-figure-frame {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .article-figure-art {
+      position: absolute;
+      inset: 0;
+    }
+    .figure-caption {
+      font-size: 0.74rem;
+      color: var(--stone);
+      margin-top: 0.85rem;
+      padding-left: 1rem;
+      border-left: 1px solid var(--border);
+      line-height: 1.5;
+    }
+    .figure-caption em { font-style: italic; color: var(--stone-light); }
+
+    /* Material breakdown table */
+    .material-breakdown {
+      border-top: 1px solid var(--ink);
+      margin: 2.5rem 0;
+    }
+    .material-row {
+      display: grid;
+      grid-template-columns: 100px 1fr 1fr;
+      align-items: baseline;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--border-soft);
+      gap: 1.5rem;
+    }
+    .material-row:last-child { border-bottom: 1px solid var(--ink); }
+    .mat-label {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+    }
+    .mat-title {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .mat-desc {
+      font-size: 0.88rem;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+
+    /* Editorial separator */
+    .ed-separator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 3.5rem 0;
+      color: var(--stone-light);
+    }
+    .ed-separator::before,
+    .ed-separator::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: var(--border);
+    }
+    .ed-separator-mark {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-style: italic;
+      letter-spacing: 0.3em;
+    }
+
+    /* Expert insight */
+    .expert-block {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 1.2rem;
+      padding: 1.75rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+    .expert-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .expert-avatar svg { width: 100%; height: 100%; }
+    .expert-name {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.15rem;
+    }
+    .expert-role {
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 0.75rem;
+    }
+    .expert-quote {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--stone);
+    }
+
+    /* ─── AUTHOR MODULE ─────────────────────────────────────────── */
+    .author-module {
+      max-width: var(--max-w-article);
+      margin: 0 auto;
+      padding: 4rem var(--pad-x) 5rem;
+    }
+    .author-module-inner {
+      max-width: 940px;
+      margin: 0 auto 0 calc((100% - 680px - 5rem - 260px) / 2 + 260px + 5rem - 940px + 940px);
+      max-width: 940px;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 120px 1fr auto;
+      gap: 2rem;
+      align-items: center;
+    }
+    .author-mod-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+    }
+    .author-mod-photo svg { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 95%; }
+    .author-mod-info { }
+    .author-mod-eyebrow {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 0.5rem;
+    }
+    .author-mod-name {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+    .author-mod-name em { font-style: italic; }
+    .author-mod-bio {
+      font-size: 0.88rem;
+      color: var(--stone);
+      line-height: 1.65;
+      max-width: 540px;
+      margin-bottom: 1rem;
+    }
+    .author-mod-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .author-mod-tag {
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone);
+      border: 1px solid var(--border);
+      padding: 0.28rem 0.7rem;
+    }
+    .author-mod-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      padding: 0.85rem 1.4rem;
+      border: 1px solid var(--ink);
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .author-mod-cta:hover { background: var(--ink); color: var(--white); }
+
+    /* ─── RELATED ARTICLES ─────────────────────────────────────── */
+    .related-section {
+      background: var(--cream);
+      padding: 5.5rem var(--pad-x);
+    }
+    .related-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .related-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+    }
+    .related-eyebrow {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 0.85rem;
+    }
+    .related-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+    .related-heading em { font-style: italic; }
+    .view-all {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone);
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: color 0.2s, gap 0.2s;
+      flex-shrink: 0;
+      padding-bottom: 0.4rem;
+    }
+    .view-all:hover { color: var(--ink); gap: 0.7rem; }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .related-card {
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      transition: background 0.25s;
+    }
+    .related-card:hover { background: #FDFCFA; }
+    .related-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+    .related-img-fill {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.55s ease;
+    }
+    .related-card:hover .related-img-fill { transform: scale(1.03); }
+    .related-body {
+      padding: 1.5rem 1.75rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .related-cat {
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 0.7rem;
+    }
+    .related-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 0.7rem;
+      flex: 1;
+      transition: opacity 0.2s;
+    }
+    .related-card:hover .related-title { opacity: 0.75; }
+    .related-excerpt {
+      font-size: 0.79rem;
+      line-height: 1.65;
+      color: var(--stone);
+      margin-bottom: 1.4rem;
+    }
+    .related-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.63rem;
+      letter-spacing: 0.06em;
+      color: var(--stone-light);
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+    .related-meta { display: flex; align-items: center; gap: 0.65rem; }
+    .related-sep { color: var(--border); }
+    .related-read {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.2s, gap 0.2s;
+    }
+    .related-card:hover .related-read { color: var(--ink); gap: 0.5rem; }
+
+    /* ─── NEWSLETTER CTA ────────────────────────────────────────── */
+    .nl-section {
+      background: var(--ink);
+      padding: 6rem var(--pad-x);
+      color: var(--white);
+    }
+    .nl-inner {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .nl-eyebrow {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+    .nl-eyebrow::before,
+    .nl-eyebrow::after {
+      content: '';
+      width: 22px;
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+    }
+    .nl-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.85rem);
+      font-weight: 300;
+      line-height: 1.18;
+      color: var(--white);
+      margin-bottom: 0.85rem;
+    }
+    .nl-heading em { font-style: italic; }
+    .nl-sub {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .nl-form { display: flex; flex-direction: column; align-items: center; }
+    .nl-input-row {
+      width: 100%;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      margin-bottom: 1.25rem;
+    }
+    .nl-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 0.75rem 7rem 0.75rem 0;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      color: var(--white);
+    }
+    .nl-input:focus { outline: none; }
+    .nl-input::placeholder {
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.1em;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+    .nl-btn {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.2s;
+    }
+    .nl-btn:hover { gap: 0.65rem; }
+    .nl-fine {
+      font-size: 0.62rem;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.04em;
+    }
+    .nl-fine a { text-decoration: underline; text-underline-offset: 2px; color: rgba(255,255,255,0.55); }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+    }
+    .footer-top {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 4rem var(--pad-x) 3rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4.5rem;
+      align-items: start;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-email-label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+      margin-bottom: 0.65rem;
+    }
+    .footer-email-row {
+      position: relative;
+      border-bottom: 1px solid var(--stone);
+    }
+    .footer-email-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 0.65rem 9rem 0.65rem 0;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      color: var(--ink);
+    }
+    .footer-email-input:focus { outline: none; }
+    .footer-email-input::placeholder {
+      color: var(--stone-light);
+      font-size: 0.7rem;
+    }
+    .footer-email-btn {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      white-space: nowrap;
+      transition: gap 0.2s;
+    }
+    .footer-email-btn:hover { gap: 0.55rem; }
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+    }
+    .footer-col-title {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.65rem; }
+    .footer-col ul a {
+      font-size: 0.76rem;
+      color: var(--stone);
+      transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--ink); }
+    .live-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin-right: 0.35rem;
+      position: relative;
+      top: -1px;
+    }
+    .footer-bottom {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2.75rem var(--pad-x) 2.5rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .footer-tagline-main {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.2;
+      display: block;
+    }
+    .footer-tagline-sub {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.2;
+      display: block;
+    }
+    .footer-legal {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .footer-legal a,
+    .footer-legal span {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone-light);
+    }
+    .footer-legal a:hover { color: var(--ink); transition: color 0.2s; }
+    .legal-sep { color: var(--border) !important; }
+
+    /* ─── FADE-IN ANIMATIONS ────────────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .article-wrap {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 3.5rem var(--pad-x);
+      }
+      .sidebar {
+        position: relative;
+        top: 0;
+        max-height: none;
+        overflow: visible;
+        margin-bottom: 3.5rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+      .sidebar-block { margin-bottom: 0; }
+      .sidebar-block.full { grid-column: 1 / -1; }
+      .article { max-width: 100%; }
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-cols { grid-template-columns: repeat(3, 1fr); }
+      .author-module-inner { grid-template-columns: 100px 1fr; }
+      .author-module-inner .author-mod-cta { grid-column: 2; justify-self: start; margin-top: 0.5rem; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --pad-x: 1.5rem; }
+      .header-nav { display: none; }
+      .util-text { display: none; }
+      .hamburger { display: flex; }
+      .article-hero { padding: 2.5rem var(--pad-x) 2.5rem; }
+      .article-wrap { padding: 3rem var(--pad-x); }
+      .sidebar { grid-template-columns: 1fr; gap: 2rem; }
+      .article p, .article ul.editorial-list li, .article ol.editorial-list li {
+        font-size: 1.05rem;
+      }
+      .article .lede { font-size: 1.2rem; }
+      .article .lede::first-letter { font-size: 3.5rem; }
+      .stat-module { grid-template-columns: 1fr; }
+      .stat-cell { border-right: 0; border-bottom: 1px solid var(--border); }
+      .stat-cell:last-child { border-bottom: 0; }
+      .pull-quote { margin: 2.5rem 0; padding-left: 1.5rem; }
+      .related-grid { grid-template-columns: 1fr; }
+      .related-section { padding: 4rem var(--pad-x); }
+      .nl-section { padding: 4rem var(--pad-x); }
+      .author-module-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.25rem;
+        padding-top: 2.5rem;
+      }
+      .author-mod-photo { margin: 0 auto; }
+      .author-module-inner .author-mod-cta {
+        grid-column: 1;
+        justify-self: center;
+        margin-top: 0.5rem;
+      }
+      .author-mod-bio { margin-left: auto; margin-right: auto; }
+      .author-mod-tags { justify-content: center; }
+      .material-row { grid-template-columns: 1fr; gap: 0.3rem; }
+      .footer-top { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-cols { grid-template-columns: repeat(2, 1fr); }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 2rem; padding-top: 2rem; }
+      .hero-headline { font-size: 2.2rem; }
+      .breadcrumb-inner { font-size: 0.62rem; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="ann-bar" role="banner">
+    <a href="#">SHOP BASICS</a> Familiar favorites, made to last.
+  </div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+
+      <a href="/" class="header-logo" aria-label="Nation Los Angeles home">
+        <span class="header-logo-name">Nation</span>
+        <span class="header-logo-sub">Los Angeles</span>
+      </a>
+
+      <nav class="header-nav" aria-label="Primary">
+        <a href="#">New</a>
+        <a href="#">Core</a>
+        <a href="#">Icons</a>
+        <a href="#">Clothing</a>
+        <a href="#" class="nav-renew">(Renew)</a>
+        <a href="#">About</a>
+      </nav>
+
+      <div class="header-utils">
+        <button class="util-icon" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <a href="#" class="util-text">PL&nbsp;/&nbsp;ZŁ</a>
+        <a href="#" class="util-text">HELP</a>
+        <a href="#" class="util-text">SIGN IN</a>
+        <button class="util-icon" aria-label="Cart">
+          <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Reading progress bar -->
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <button class="mobile-nav-close" id="mobile-close" aria-label="Close menu">×</button>
+    <ul class="mobile-nav-links">
+      <li><a href="#">New</a></li>
+      <li><a href="#">Core</a></li>
+      <li><a href="#">Icons</a></li>
+      <li><a href="#">Clothing</a></li>
+      <li><a href="#" style="color:var(--stone)">(Renew)</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="breadcrumb-inner">
+        <a href="#">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="#">Stories</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <a href="#">Materials</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        <span class="breadcrumb-current" aria-current="page">The Quiet Power of Pima</span>
+      </div>
+    </nav>
+
+    <!-- ARTICLE HERO -->
+    <article>
+    <header class="article-hero">
+      <div class="article-hero-inner">
+        <div class="hero-category">Materials &amp; Craft</div>
+        <h1 class="hero-headline">
+          The Quiet Power<br>of <em>Pima.</em>
+        </h1>
+        <p class="hero-standfirst">
+          Why a single cotton variety has become fashion's most considered material — and what its long, careful path from seed to stitch tells us about the future of premium basics.
+        </p>
+        <div class="hero-meta">
+          <span class="hero-author-mini">
+            <span class="hero-author-avatar" aria-hidden="true">
+              <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="15" cy="15" r="15" fill="#EDE9E1"/>
+                <ellipse cx="15" cy="13.5" rx="5" ry="5.5" fill="#CEBFB4"/>
+                <path d="M5 30 Q5 21 15 21 Q25 21 25 30 Z" fill="#C6C0B8"/>
+                <path d="M10.2 13 Q9.8 7.6 15 7.2 Q20.2 7.6 19.8 13 Q18.4 9.6 15 9.4 Q11.6 9.6 10.2 13Z" fill="#7A6A5E"/>
+              </svg>
+            </span>
+            <a href="#">Alexandra Reid</a>
+          </span>
+          <span class="meta-dot" aria-hidden="true"></span>
+          <span>May 21, 2026</span>
+          <span class="meta-dot" aria-hidden="true"></span>
+          <span>12 min read</span>
+          <span class="meta-dot" aria-hidden="true"></span>
+          <span class="hero-share" aria-label="Share article">
+            <button class="share-btn" aria-label="Share to X">
+              <svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 L4 20" stroke-linecap="round"/></svg>
+            </button>
+            <button class="share-btn" aria-label="Share to LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </button>
+            <button class="share-btn" aria-label="Copy link" id="copy-link-btn">
+              <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </button>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO IMAGE -->
+    <div class="hero-image">
+      <div class="hero-image-frame">
+        <div class="hero-image-art"></div>
+        <!-- Decorative cotton bolls -->
+        <div class="hero-cotton" aria-hidden="true">
+          <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Stem -->
+            <path d="M60 195 Q70 150 90 110 Q100 90 115 75" stroke="#5A5046" stroke-width="1.5" fill="none" opacity="0.5"/>
+            <path d="M115 75 Q140 60 165 50" stroke="#5A5046" stroke-width="1.2" fill="none" opacity="0.5"/>
+            <!-- Leaves -->
+            <path d="M90 110 Q72 100 65 88 Q80 92 92 105 Z" fill="#7A6A5E" opacity="0.45"/>
+            <path d="M140 70 Q155 60 168 65 Q158 78 142 78 Z" fill="#7A6A5E" opacity="0.45"/>
+            <!-- Cotton boll 1 -->
+            <g transform="translate(115,75)">
+              <ellipse cx="0" cy="0" rx="22" ry="20" fill="#F8F4ED"/>
+              <ellipse cx="-7" cy="-4" rx="9" ry="8" fill="#FFFFFF"/>
+              <ellipse cx="7" cy="-3" rx="9" ry="8" fill="#FFFFFF"/>
+              <ellipse cx="-5" cy="6" rx="9" ry="8" fill="#FFFFFF"/>
+              <ellipse cx="7" cy="6" rx="9" ry="8" fill="#FFFFFF"/>
+              <path d="M-22 12 L-15 22 L-6 17 L0 24 L7 17 L15 22 L22 12 Z" fill="#8A7A6E"/>
+            </g>
+            <!-- Cotton boll 2 -->
+            <g transform="translate(170,50)">
+              <ellipse cx="0" cy="0" rx="18" ry="16" fill="#F8F4ED"/>
+              <ellipse cx="-5" cy="-3" rx="7" ry="6.5" fill="#FFFFFF"/>
+              <ellipse cx="5" cy="-2" rx="7" ry="6.5" fill="#FFFFFF"/>
+              <ellipse cx="-4" cy="5" rx="7" ry="6.5" fill="#FFFFFF"/>
+              <ellipse cx="6" cy="5" rx="7" ry="6.5" fill="#FFFFFF"/>
+              <path d="M-18 10 L-12 18 L-5 14 L0 19 L5 14 L12 18 L18 10 Z" fill="#8A7A6E"/>
+            </g>
+            <!-- Cotton boll 3 (smaller) -->
+            <g transform="translate(60,150)">
+              <ellipse cx="0" cy="0" rx="14" ry="12" fill="#F8F4ED" opacity="0.85"/>
+              <ellipse cx="-4" cy="-2" rx="5.5" ry="5" fill="#FFFFFF"/>
+              <ellipse cx="4" cy="-2" rx="5.5" ry="5" fill="#FFFFFF"/>
+              <ellipse cx="-3" cy="4" rx="5.5" ry="5" fill="#FFFFFF"/>
+              <ellipse cx="5" cy="4" rx="5.5" ry="5" fill="#FFFFFF"/>
+              <path d="M-14 8 L-9 14 L-4 11 L0 15 L4 11 L9 14 L14 8 Z" fill="#8A7A6E"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hero-image-overlay">Photography by Reid &amp; Co · Atelier Pima, Peru</div>
+      </div>
+    </div>
+
+    <!-- ARTICLE LAYOUT -->
+    <div class="article-wrap">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Article navigation and tools">
+
+        <div class="sidebar-block">
+          <div class="sidebar-eyebrow">In this article</div>
+          <nav class="toc-list" id="toc">
+            <a href="#section-1" class="toc-link"><span class="toc-num">01</span><span class="toc-text">The Material Question</span></a>
+            <a href="#section-2" class="toc-link"><span class="toc-num">02</span><span class="toc-text">Why Pima, Why Now</span></a>
+            <a href="#section-3" class="toc-link"><span class="toc-num">03</span><span class="toc-text">From Seed to Stitch</span></a>
+            <a href="#section-4" class="toc-link"><span class="toc-num">04</span><span class="toc-text">The Cost-Per-Wear Argument</span></a>
+            <a href="#section-5" class="toc-link"><span class="toc-num">05</span><span class="toc-text">Wearing With Intention</span></a>
+          </nav>
+        </div>
+
+        <div class="sidebar-block">
+          <div class="sidebar-eyebrow">Filed under</div>
+          <div class="tag-cloud">
+            <span class="tag-pill">Pima Cotton</span>
+            <span class="tag-pill">Slow Fashion</span>
+            <span class="tag-pill">Materials</span>
+            <span class="tag-pill">Ethical Sourcing</span>
+            <span class="tag-pill">Basics</span>
+          </div>
+        </div>
+
+        <div class="sidebar-block full">
+          <div class="sb-nl">
+            <h3 class="sb-nl-heading">The <em>Quarterly.</em></h3>
+            <p class="sb-nl-sub">Considered writing on materials, makers, and the slow rhythms of fashion.</p>
+            <form class="sb-nl-row" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='Thank you ✓';">
+              <input type="email" class="sb-nl-input" placeholder="Enter your email" aria-label="Email">
+              <button type="submit" class="sb-nl-btn" aria-label="Subscribe">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="sidebar-block">
+          <div class="sidebar-eyebrow">Shop the essentials</div>
+          <a href="#" class="sb-shop">
+            <div class="sb-shop-img" aria-hidden="true">
+              <svg class="sb-shop-svg" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                <!-- Folded tee silhouette -->
+                <path d="M40 180 L40 100 Q40 78 60 70 L80 62 L100 70 L120 62 L140 70 Q160 78 160 100 L160 180 Z" fill="#FAF7F1"/>
+                <path d="M80 62 Q90 80 100 82 Q110 80 120 62" fill="none" stroke="#D8CFC0" stroke-width="1.2"/>
+                <path d="M40 100 L30 95 L25 110 L35 115 Z" fill="#FAF7F1"/>
+                <path d="M160 100 L170 95 L175 110 L165 115 Z" fill="#FAF7F1"/>
+                <line x1="40" y1="140" x2="160" y2="140" stroke="#E5DDCE" stroke-width="0.8"/>
+                <line x1="40" y1="160" x2="160" y2="160" stroke="#E5DDCE" stroke-width="0.8"/>
+              </svg>
+            </div>
+            <div class="sb-shop-body">
+              <div class="sb-shop-cat">Featured</div>
+              <div class="sb-shop-title">The Pima Crew, in cream</div>
+              <span class="sb-shop-cta">Shop now →</span>
+            </div>
+          </a>
+        </div>
+
+      </aside>
+
+      <!-- ARTICLE CONTENT -->
+      <div class="article">
+
+        <p class="lede">
+          There is a moment, when you put on a t-shirt made of properly grown long-staple Pima cotton, where you can feel the difference before you can name it. The fabric is heavier than you expected, denser, almost faintly cool against the skin. It does not feel papery. It does not feel like a garment you will be replacing in six months. It feels — and this is the word that returns whenever conversations about Pima begin in earnest — <em>considered.</em>
+        </p>
+
+        <p>
+          For the past two years, our team at Nation has been quietly rebuilding the foundations of our knit program around a single variety of cotton grown in the river valleys of northern Peru. The decision was not glamorous. It involved long flights, longer meetings, soil reports, and uncomfortable conversations about cost. But the case for Pima — for slowing down, for asking better questions about where our materials come from — has become, in this strange decade for fashion, almost impossible to argue against.
+        </p>
+
+        <p>
+          This is an attempt to explain why.
+        </p>
+
+        <h2 id="section-1">
+          <span class="h2-num">01 — The Material Question</span>
+          The fabric is the <em>first</em> ethical decision.
+        </h2>
+
+        <p>
+          When most people think about sustainable fashion, they imagine recycled polyester windbreakers or reclaimed denim or a small, earnest cottage industry of vegetable-dyed linen. These are real things, and many of them are valuable. But they obscure a less photogenic truth: the single most consequential decision a clothing brand makes is not its dye process or its packaging or its return policy. It is the fibre itself.
+        </p>
+
+        <p>
+          Fibre selection determines water use, soil chemistry, farm labour conditions, manufacturing complexity, garment lifespan, end-of-life options, and roughly seventy percent of a product's lifetime carbon footprint. <a href="#" class="inline-link">A growing body of research</a> suggests that what we choose to make our clothes <em>from</em> matters more than nearly anything that happens after.
+        </p>
+
+        <div class="callout">
+          <div class="callout-eyebrow">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+            Why It Matters
+          </div>
+          <h3 class="callout-heading">Conventional cotton uses roughly <em>2,700 litres</em> of water to grow the fibre for a single t-shirt.</h3>
+          <p class="callout-body">
+            That is more than most people drink in three years. Long-staple Pima, grown in regions with reliable river irrigation and lower pesticide loads, can dramatically reduce both the water and chemical footprint of a finished garment — provided it is grown carefully, and grown honestly.
+          </p>
+        </div>
+
+        <p>
+          The trouble, of course, is that "carefully" and "honestly" are not free. Pima costs roughly three to five times what conventional short-staple cotton costs at the spool. For most of the industry, that maths simply does not work. For a brand built around making fewer things, better, it begins to make sense.
+        </p>
+
+        <h2 id="section-2">
+          <span class="h2-num">02 — Why Pima, Why Now</span>
+          A <em>slow</em> renaissance for the right reasons.
+        </h2>
+
+        <p>
+          Pima cotton is not new. It has been grown in some form along the coast of Peru for over five thousand years and was selectively bred into its modern form in the southwestern United States in the early twentieth century. What is new is the cultural conversation around it.
+        </p>
+
+        <p>
+          For decades, Pima existed as a quiet luxury — used by Italian shirtmakers, Japanese mill weavers, and a handful of American heritage labels. It was the fabric you discovered if you cared deeply about clothing, but it never broke through to mainstream attention. Three things have changed.
+        </p>
+
+        <ol class="editorial-list">
+          <li><strong>Transparency tools have matured.</strong> Blockchain-tracked supply chains, third-party fibre audits, and DNA-level cotton verification mean it is finally possible to prove what your shirt is actually made of.</li>
+          <li><strong>Consumer attention has shifted toward longevity.</strong> The cost-per-wear conversation, once a niche preoccupation of menswear forums, is now part of how a generation thinks about its closet.</li>
+          <li><strong>The fast fashion model is structurally cracking.</strong> Regulatory pressure, returns logistics, and shifting consumer trust are forcing premium brands to differentiate not on novelty but on integrity.</li>
+        </ol>
+
+        <p>
+          In this environment, a fibre that lasts twice as long, feels markedly better, and can be traced back to a specific valley becomes something more than a material choice. It becomes a position.
+        </p>
+
+        <div class="stat-module">
+          <div class="stat-cell">
+            <span class="stat-num">42<span class="stat-unit">mm</span></span>
+            <span class="stat-label">Avg. fibre length</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num">3.5<span class="stat-unit">×</span></span>
+            <span class="stat-label">Stronger than standard cotton</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-num">100<span class="stat-unit">%</span></span>
+            <span class="stat-label">Hand-harvested in Peru</span>
+          </div>
+        </div>
+
+        <p class="figure-caption" style="text-align:center; border-left: 0; padding-left: 0; margin-top: -1.5rem; margin-bottom: 2.5rem;">
+          <em>Sources: ASTM D5103 fibre testing; Peruvian Cotton Council; independent farm audits, 2024.</em>
+        </p>
+
+        <h2 id="section-3">
+          <span class="h2-num">03 — From Seed to Stitch</span>
+          A garment is the <em>end</em> of a long story.
+        </h2>
+
+        <p>
+          The shirt you wear is the visible final chapter of a process that takes, in our case, somewhere between sixteen and twenty-two months. Understanding that timeline is the easiest way to understand why we no longer believe in seasonal drops.
+        </p>
+
+        <h3>The fibre takes its time</h3>
+
+        <p>
+          Pima plants are planted in late winter and harvested almost a full year later. Unlike fast-growing conventional cotton, the long-staple varieties require a specific combination of dry desert heat, mineral-rich soil, and steady irrigation from the Andes. They cannot be rushed. The plants set their bolls slowly, and the fibre cells inside lengthen over weeks. Harvest happens by hand, twice, to separate the fully mature bolls from those still developing.
+        </p>
+
+        <div class="article-figure">
+          <div class="article-figure-frame">
+            <div class="article-figure-art" style="background: linear-gradient(160deg, #EFEAE1 0%, #DDD5C7 60%, #C5BBA8 100%);">
+              <svg width="100%" height="100%" viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <radialGradient id="haze" cx="50%" cy="40%" r="60%">
+                    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <rect width="600" height="450" fill="url(#haze)"/>
+                <!-- Horizon -->
+                <rect y="280" width="600" height="170" fill="#B8AC97" opacity="0.5"/>
+                <rect y="320" width="600" height="130" fill="#9F927C" opacity="0.4"/>
+                <!-- Distant mountains -->
+                <path d="M0 280 L80 240 L160 270 L240 230 L320 265 L400 235 L480 270 L600 245 L600 290 L0 290 Z" fill="#A89B85" opacity="0.6"/>
+                <!-- Cotton rows -->
+                <g opacity="0.85">
+                  <circle cx="80" cy="350" r="10" fill="#F8F4ED"/>
+                  <circle cx="150" cy="360" r="12" fill="#F8F4ED"/>
+                  <circle cx="230" cy="345" r="9" fill="#F8F4ED"/>
+                  <circle cx="310" cy="365" r="11" fill="#F8F4ED"/>
+                  <circle cx="390" cy="355" r="10" fill="#F8F4ED"/>
+                  <circle cx="470" cy="365" r="12" fill="#F8F4ED"/>
+                  <circle cx="540" cy="350" r="9" fill="#F8F4ED"/>
+                  <circle cx="50" cy="395" r="13" fill="#FFFFFF"/>
+                  <circle cx="130" cy="405" r="11" fill="#FFFFFF"/>
+                  <circle cx="210" cy="400" r="14" fill="#FFFFFF"/>
+                  <circle cx="295" cy="410" r="12" fill="#FFFFFF"/>
+                  <circle cx="380" cy="400" r="13" fill="#FFFFFF"/>
+                  <circle cx="465" cy="408" r="11" fill="#FFFFFF"/>
+                  <circle cx="550" cy="402" r="14" fill="#FFFFFF"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <p class="figure-caption">A cotton field at first harvest, Piura Valley, Peru. <em>Bolls are hand-selected over multiple passes to ensure only fully matured fibre enters the bale.</em></p>
+        </div>
+
+        <h3>From bale to yarn</h3>
+
+        <p>
+          Once harvested, the cotton is graded, ginned to separate fibre from seed, and combed — a process that pulls out the shortest, weakest fibres and aligns the remaining long staples in parallel. Combing is the secret behind why Pima feels the way it does. Standard cotton is rarely combed because the process discards up to twenty percent of the harvested weight. For us, that loss is the point.
+        </p>
+
+        <h3>From yarn to cloth</h3>
+
+        <p>
+          The combed yarn travels to mills — some in Peru, some in Portugal, depending on the construction — where it is knit into the fabric weights our patternmakers have specified. Heavyweight jersey for our crewneck. Mid-weight rib for our long-sleeves. A finer interlock for our women's tees. The knitting itself is slow. A high-quality circular knit machine running heavyweight Pima will produce roughly a third of what the same machine would produce with cheaper short-staple yarn.
+        </p>
+
+        <div class="pull-quote">
+          <blockquote class="pull-quote-text">
+            "Good fabric does not announce itself. It simply outlasts the conversation about whether it was worth it."
+          </blockquote>
+          <p class="pull-quote-attr">Marisol Quintana — Master Weaver, Lima</p>
+        </div>
+
+        <h3>The material breakdown</h3>
+
+        <div class="material-breakdown">
+          <div class="material-row">
+            <span class="mat-label">Origin</span>
+            <span class="mat-title">Piura, Peru</span>
+            <span class="mat-desc">Coastal river valley, mineral-rich alluvial soil, hand-harvested over two passes.</span>
+          </div>
+          <div class="material-row">
+            <span class="mat-label">Fibre</span>
+            <span class="mat-title">Extra-long staple Pima</span>
+            <span class="mat-desc">38–44mm fibre length, combed to remove short staples, ring-spun yarn.</span>
+          </div>
+          <div class="material-row">
+            <span class="mat-label">Construction</span>
+            <span class="mat-title">220 GSM compact knit</span>
+            <span class="mat-desc">Heavyweight jersey, garment-washed to relax fibres before cutting.</span>
+          </div>
+          <div class="material-row">
+            <span class="mat-label">Certification</span>
+            <span class="mat-title">PIMA Tanguis verified</span>
+            <span class="mat-desc">Third-party DNA verification at three points in the supply chain.</span>
+          </div>
+        </div>
+
+        <div class="expert-block">
+          <div class="expert-avatar" aria-hidden="true">
+            <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="28" cy="28" r="28" fill="#EDE9E1"/>
+              <ellipse cx="28" cy="25" rx="9" ry="10" fill="#CEBFB4"/>
+              <path d="M10 56 Q10 38 28 38 Q46 38 46 56 Z" fill="#A89B85"/>
+              <path d="M19 24 Q18 14 28 13 Q38 14 37 24 Q34 18 28 17.5 Q22 18 19 24Z" fill="#3A3128"/>
+            </svg>
+          </div>
+          <div>
+            <div class="expert-name">Dr. Helena Ortiz</div>
+            <div class="expert-role">Textile Scientist · Universidad Nacional Agraria</div>
+            <p class="expert-quote">"What people are really paying for when they buy Pima isn't the cotton — it's the time. Time the plant spent in the field. Time the fibres spent being combed and not rushed. That time becomes longevity in the wearer's closet."</p>
+          </div>
+        </div>
+
+        <div class="ed-separator" aria-hidden="true">
+          <span class="ed-separator-mark">·</span>
+        </div>
+
+        <h2 id="section-4">
+          <span class="h2-num">04 — The Cost-Per-Wear Argument</span>
+          The price tag is the <em>beginning,</em> not the end.
+        </h2>
+
+        <p>
+          A Pima cotton crewneck made to our specifications retails for around three times what a fast-fashion equivalent costs. This is, on its face, an uncomfortable conversation. We have spent a great deal of time thinking about how to have it honestly.
+        </p>
+
+        <p>
+          The framework that has helped us most is cost-per-wear: the price of a garment divided by the number of times you actually put it on. By that measure, a $95 Pima tee worn 200 times costs you 48 cents per wear. A $30 supermarket tee worn 15 times before it pills, shrinks, twists, or simply stops being something you reach for costs you $2.00 per wear — and represents four times the environmental load.
+        </p>
+
+        <ul class="editorial-list">
+          <li><strong>Pilling resistance.</strong> Long-staple Pima resists the surface fuzz that destroys the appearance of cheaper knits within a season.</li>
+          <li><strong>Dimensional stability.</strong> Combed, garment-washed fabric does not twist, shrink, or distort after washing.</li>
+          <li><strong>Colour retention.</strong> The denser fibre structure holds dye more deeply, meaning blacks stay black and creams stay clean.</li>
+          <li><strong>Repairable construction.</strong> Heavier-weight knits can be mended, darned, and tailored. Lightweight fast-fashion knits, generally, cannot.</li>
+        </ul>
+
+        <p>
+          None of this is a sales pitch. It is the accumulated knowledge of mills and tailors who have been working with this fibre, in some cases, for four generations. It is also why almost every serious clothing collector you can name has, somewhere in their wardrobe, a Pima cotton t-shirt they have owned for a decade and intend to own for another.
+        </p>
+
+        <h2 id="section-5">
+          <span class="h2-num">05 — Wearing With Intention</span>
+          A wardrobe is a <em>relationship.</em>
+        </h2>
+
+        <p>
+          The deeper argument for Pima — and for the broader slow fashion movement it represents — is not really about cotton. It is about what kind of relationship you want with the objects that touch your skin every day.
+        </p>
+
+        <p>
+          Fast fashion taught a generation to treat clothing as disposable, almost edible: a fleeting mood, consumed and replaced. The alternative is not minimalism for its own sake. It is a different relationship — fewer things, chosen with more care, owned for longer, repaired when they break, and eventually passed on with their stories intact.
+        </p>
+
+        <p>
+          When you buy a Pima cotton garment, you are not just buying superior cotton. You are buying into a slower timeline. You are choosing a piece of clothing that was, somewhere along its journey, touched by people who took their time. And — if you take care of it — it will reward that decision for years.
+        </p>
+
+        <p>
+          A few suggestions, finally, for living with a garment like this:
+        </p>
+
+        <ul class="editorial-list">
+          <li>Wash less. Cold water, inside out, and only when truly needed. Air between wears is your fabric's best friend.</li>
+          <li>Lay flat to dry whenever possible. Tumble dryers shorten the lifespan of even the finest knits by years.</li>
+          <li>Fold rather than hang. Knits stretch under their own weight on hangers; folded, they hold their shape indefinitely.</li>
+          <li>Mend small holes early. A single afternoon with a needle saves a garment that would otherwise be lost to the bin.</li>
+          <li>When it is finally finished — and good Pima takes a decade or more to finish — pass it on, donate it, or cut it down. It will still be useful.</li>
+        </ul>
+
+        <p>
+          That, in the end, is what we mean when we talk about conscious consumption. Not abstinence. Not minimalism as a lifestyle aesthetic. Just a quieter, more honest relationship with the things we wear.
+        </p>
+
+        <p>
+          The cotton is only the beginning.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- AUTHOR MODULE -->
+    <section class="author-module" aria-labelledby="author-mod-name">
+      <div class="author-module-inner">
+        <div class="author-mod-photo" aria-hidden="true">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="60" fill="#EDE9E1"/>
+            <ellipse cx="60" cy="50" rx="20" ry="22" fill="#CEBFB4"/>
+            <path d="M22 120 Q22 84 60 84 Q98 84 98 120 Z" fill="#C6C0B8"/>
+            <path d="M38 48 Q37 22 60 20 Q83 22 82 48 Q76 32 60 30 Q44 32 38 48Z" fill="#7A6A5E"/>
+            <path d="M38 48 Q34 64 38 78 L46 66 Q40 56 38 48Z" fill="#7A6A5E"/>
+            <path d="M82 48 Q86 64 82 78 L74 66 Q80 56 82 48Z" fill="#7A6A5E"/>
+          </svg>
+        </div>
+        <div class="author-mod-info">
+          <div class="author-mod-eyebrow">Written by</div>
+          <h2 class="author-mod-name" id="author-mod-name">Alexandra <em>Reid</em></h2>
+          <p class="author-mod-bio">
+            Senior Editor at Nation Los Angeles. Alexandra writes about the intersection of artificial intelligence, sustainable materials, and the quiet revolution in conscious fashion. Previously contributing editor at Vogue Business and Business of Fashion.
+          </p>
+          <div class="author-mod-tags">
+            <span class="author-mod-tag">Sustainable Fashion</span>
+            <span class="author-mod-tag">Materials</span>
+            <span class="author-mod-tag">Slow Fashion</span>
+          </div>
+        </div>
+        <a href="#" class="author-mod-cta">View all articles →</a>
+      </div>
+    </section>
+    </article>
+
+    <!-- RELATED ARTICLES -->
+    <section class="related-section" aria-labelledby="related-heading">
+      <div class="related-inner">
+        <div class="related-header">
+          <div>
+            <p class="related-eyebrow">Continue reading</p>
+            <h2 class="related-heading" id="related-heading">Related <em>stories</em></h2>
+          </div>
+          <a href="#" class="view-all">View all journal →</a>
+        </div>
+
+        <div class="related-grid">
+
+          <article class="related-card">
+            <div class="related-img">
+              <div class="related-img-fill" style="background:linear-gradient(140deg,#E0DAD0 0%,#C8C0B2 100%);"></div>
+            </div>
+            <div class="related-body">
+              <div class="related-cat">Capsule Wardrobe</div>
+              <h3 class="related-title">How to Build a Sustainable Capsule Wardrobe in Seven Pieces</h3>
+              <p class="related-excerpt">A practical guide to assembling a small, considered closet that works harder, lasts longer, and leaves room for the pieces you truly love.</p>
+              <div class="related-footer">
+                <div class="related-meta">
+                  <span>Apr 2026</span>
+                  <span class="related-sep">·</span>
+                  <span>9 min</span>
+                </div>
+                <span class="related-read">Read →</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="related-card">
+            <div class="related-img">
+              <div class="related-img-fill" style="background:linear-gradient(140deg,#C8C2BA 0%,#B4ADA0 100%);"></div>
+            </div>
+            <div class="related-body">
+              <div class="related-cat">Industry</div>
+              <h3 class="related-title">The Hidden Cost of Fast Fashion, in Numbers We Can Finally Trust</h3>
+              <p class="related-excerpt">Three independent researchers helped us calculate the real environmental weight of a single fast-fashion garment. The maths is not comfortable.</p>
+              <div class="related-footer">
+                <div class="related-meta">
+                  <span>Mar 2026</span>
+                  <span class="related-sep">·</span>
+                  <span>14 min</span>
+                </div>
+                <span class="related-read">Read →</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="related-card">
+            <div class="related-img">
+              <div class="related-img-fill" style="background:linear-gradient(140deg,#DEDAD3 0%,#CAC6BF 100%);"></div>
+            </div>
+            <div class="related-body">
+              <div class="related-cat">Manufacturing</div>
+              <h3 class="related-title">What Makes Ethical Manufacturing Expensive — and Why It Is Worth Paying For</h3>
+              <p class="related-excerpt">An inside look at the people, processes, and small daily decisions that separate considered manufacturing from the alternative.</p>
+              <div class="related-footer">
+                <div class="related-meta">
+                  <span>Feb 2026</span>
+                  <span class="related-sep">·</span>
+                  <span>11 min</span>
+                </div>
+                <span class="related-read">Read →</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER CTA -->
+    <section class="nl-section" aria-labelledby="nl-heading">
+      <div class="nl-inner">
+        <p class="nl-eyebrow">Subscribe</p>
+        <h2 class="nl-heading" id="nl-heading">Thoughtful <em>fashion writing,</em><br>delivered with intention.</h2>
+        <p class="nl-sub">Join 24,000 readers receiving Nation's monthly journal on sustainability, materials, and the quieter brands worth knowing.</p>
+        <form class="nl-form" id="nl-form" novalidate>
+          <div class="nl-input-row">
+            <input
+              type="email"
+              class="nl-input"
+              id="nl-email"
+              placeholder="Enter your email"
+              required
+              aria-label="Email address"
+              autocomplete="email"
+            >
+            <button type="submit" class="nl-btn">Subscribe →</button>
+          </div>
+          <p class="nl-fine">No spam. Unsubscribe anytime. Read our <a href="#">privacy policy</a>.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-top">
+
+      <div>
+        <p class="footer-email-label">Enter Email</p>
+        <div class="footer-email-row">
+          <input
+            type="email"
+            class="footer-email-input"
+            placeholder="your@email.com"
+            aria-label="Email for 15% off"
+            autocomplete="email"
+          >
+          <button class="footer-email-btn" type="button">Sign up for 15% off →</button>
+        </div>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="footer-col-title">About</div>
+          <ul>
+            <li><a href="#">Our History</a></li>
+            <li><a href="#">Our Ethos</a></li>
+            <li><a href="#">Our Impact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Materials</div>
+          <ul>
+            <li><a href="#">Our Fabrics</a></li>
+            <li><a href="#">How It's Made</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Help</div>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#"><span class="live-dot" aria-hidden="true"></span>Live Chat (9am–5pm PST)</a></li>
+            <li><a href="#">Returns &amp; Exchanges</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Account</div>
+          <ul>
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">E-Gift Card</a></li>
+            <li><a href="#">Wholesale</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Follow</div>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-tagline">
+        <span class="footer-tagline-main">Understated confidence.</span>
+        <span class="footer-tagline-sub">Intentional at every step.</span>
+      </div>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <span class="legal-sep">/</span>
+        <a href="#">Terms</a>
+        <span class="legal-sep">/</span>
+        <a href="#">Accessibility</a>
+        <span>©2026 Nation LA</span>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    /* Mobile nav */
+    const hamburger   = document.getElementById('hamburger');
+    const mobileNav   = document.getElementById('mobile-nav');
+    const mobileClose = document.getElementById('mobile-close');
+
+    function openNav() {
+      mobileNav.classList.add('open');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeNav() {
+      mobileNav.classList.remove('open');
+      mobileNav.setAttribute('aria-hidden', 'true');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', openNav);
+    mobileClose.addEventListener('click', closeNav);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+
+    /* Reading progress bar */
+    const progressFill = document.getElementById('progress-fill');
+    const article = document.querySelector('.article');
+
+    function updateProgress() {
+      if (!article) return;
+      const rect = article.getBoundingClientRect();
+      const articleTop = window.scrollY + rect.top;
+      const articleHeight = article.offsetHeight;
+      const windowHeight = window.innerHeight;
+      const scrolled = window.scrollY + windowHeight - articleTop;
+      const total = articleHeight + windowHeight * 0.3;
+      const pct = Math.max(0, Math.min(100, (scrolled / total) * 100));
+      progressFill.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+
+    /* Subtle header shadow on scroll */
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        header.style.boxShadow = '0 1px 12px rgba(0,0,0,0.05)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    }, { passive: true });
+
+    /* Scrollspy TOC */
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const sections = Array.from(tocLinks).map(l => {
+      const id = l.getAttribute('href').slice(1);
+      return document.getElementById(id);
+    }).filter(Boolean);
+
+    function updateActiveTOC() {
+      const scrollY = window.scrollY + 140;
+      let activeIndex = 0;
+      sections.forEach((sec, i) => {
+        if (sec.offsetTop <= scrollY) activeIndex = i;
+      });
+      // If we're past the end of the last section, still highlight it.
+      tocLinks.forEach((link, i) => {
+        link.classList.toggle('active', i === activeIndex);
+      });
+    }
+    window.addEventListener('scroll', updateActiveTOC, { passive: true });
+    updateActiveTOC();
+
+    /* Smooth scroll for TOC */
+    tocLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            const top = target.getBoundingClientRect().top + window.scrollY - 100;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    /* Newsletter form */
+    document.getElementById('nl-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const input = this.querySelector('input');
+      const btn   = this.querySelector('button');
+      if (!input.value) return;
+      btn.textContent = 'Subscribed ✓';
+      btn.style.color = 'rgba(255,255,255,0.85)';
+      input.value = '';
+      input.disabled = true;
+      btn.disabled = true;
+    });
+
+    /* Copy link button */
+    const copyBtn = document.getElementById('copy-link-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const url = window.location.href;
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(() => {
+            copyBtn.style.color = 'var(--accent)';
+            copyBtn.style.borderColor = 'var(--accent)';
+            setTimeout(() => {
+              copyBtn.style.color = '';
+              copyBtn.style.borderColor = '';
+            }, 1500);
+          }).catch(() => {});
+        }
+      });
+    }
+
+    /* Fade-in observer */
+    const fadeEls = document.querySelectorAll('.fade-in');
+    if (fadeEls.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+      fadeEls.forEach(el => observer.observe(el));
+    }
+  </script>
+
+</body>
+</html>
