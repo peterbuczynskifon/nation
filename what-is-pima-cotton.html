@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Pima Cotton? The Complete Guide | Nation LA</title>
+<meta name="description" content="Pima cotton is an extra-long-staple fibre prized for softness, strength and pilling resistance. What it is, where it comes from, and how to spot the real thing.">
+<link rel="canonical" href="https://nation.la/journal/what-is-pima-cotton">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF8F2;
+    --paper-2:#F4EFE6;
+    --ink:#2C261F;
+    --ink-soft:#5A5046;
+    --ink-faint:#8A7E70;
+    --line:#E3DACB;
+    --stone:#CEBFB4;
+    --taupe:#7A6A5E;
+    --accent:#9A6F4E;
+    --display:"Fraunces",Georgia,serif;
+    --body:"Hanken Grotesk",-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:18px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  main{display:block}
+  em{font-style:italic}
+  a{color:inherit}
+
+  /* HERO */
+  .article-hero{padding:5.5rem 1.5rem 2.5rem;border-top:1px solid var(--line)}
+  .article-hero-inner{max-width:760px;margin:0 auto}
+  .hero-category{
+    font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:1.8rem;
+  }
+  .hero-headline{
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(2.7rem,7vw,4.6rem);
+    line-height:1.04;
+    letter-spacing:-.01em;
+    margin-bottom:1.8rem;
+  }
+  .hero-headline em{color:var(--taupe)}
+  .hero-standfirst{
+    font-size:1.22rem;line-height:1.55;color:var(--ink-soft);
+    max-width:620px;font-weight:400;
+  }
+  .hero-meta{
+    display:flex;align-items:center;flex-wrap:wrap;gap:.85rem;
+    margin-top:2.4rem;font-size:.85rem;color:var(--ink-faint);
+  }
+  .hero-author-mini{display:flex;align-items:center;gap:.55rem}
+  .hero-author-mini a{color:var(--ink);text-decoration:none;font-weight:500}
+  .hero-author-avatar svg{width:28px;height:28px;display:block;border-radius:50%}
+  .meta-dot{width:3px;height:3px;border-radius:50%;background:var(--stone)}
+  .hero-share{display:flex;gap:.4rem;margin-left:.2rem}
+  .share-btn{
+    width:30px;height:30px;border:1px solid var(--line);background:transparent;
+    border-radius:50%;display:grid;place-items:center;cursor:pointer;transition:.25s;
+  }
+  .share-btn:hover{background:var(--paper-2);border-color:var(--stone)}
+  .share-btn svg{width:14px;height:14px;fill:none;stroke:var(--ink-soft);stroke-width:1.6}
+
+  /* HERO IMAGE */
+  .hero-image{max-width:1080px;margin:1.5rem auto 0;padding:0 1.5rem}
+  .hero-image-frame{
+    position:relative;border-radius:4px;overflow:hidden;
+    aspect-ratio:16/8;
+  }
+  .hero-image-art{
+    position:absolute;inset:0;
+    background:
+      radial-gradient(120% 90% at 70% 20%, #F3EEE4 0%, #E7DECF 45%, #CFC3B0 100%);
+  }
+  .hero-cotton{position:absolute;right:4%;top:6%;width:min(42%,360px);opacity:.96}
+  .hero-cotton svg{width:100%;height:auto}
+  .hero-image-overlay{
+    position:absolute;left:1.4rem;bottom:1.2rem;
+    font-size:.72rem;letter-spacing:.08em;color:var(--ink-soft);
+    background:rgba(251,248,242,.7);padding:.35rem .7rem;border-radius:2px;
+    backdrop-filter:blur(2px);
+  }
+
+  /* LAYOUT */
+  .article-wrap{
+    max-width:1080px;margin:3.5rem auto 0;padding:0 1.5rem;
+    display:grid;grid-template-columns:1fr 270px;gap:4rem;align-items:start;
+  }
+  .article{max-width:680px}
+
+  /* SIDEBAR */
+  .sidebar{position:sticky;top:2rem;display:flex;flex-direction:column;gap:2.2rem}
+  .sidebar-eyebrow{
+    font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ink-faint);font-weight:600;margin-bottom:1rem;
+  }
+  .toc-list{display:flex;flex-direction:column;gap:.2rem;border-left:1px solid var(--line)}
+  .toc-link{
+    display:flex;gap:.7rem;padding:.5rem 0 .5rem 1rem;margin-left:-1px;
+    border-left:1px solid transparent;text-decoration:none;color:var(--ink-soft);
+    font-size:.92rem;transition:.2s;
+  }
+  .toc-link:hover{color:var(--ink);border-left-color:var(--taupe)}
+  .toc-num{color:var(--accent);font-variant-numeric:tabular-nums;font-weight:600;font-size:.8rem}
+  .tag-cloud{display:flex;flex-wrap:wrap;gap:.45rem}
+  .tag-pill{
+    font-size:.74rem;padding:.32rem .7rem;border:1px solid var(--line);
+    border-radius:100px;color:var(--ink-soft);
+  }
+  .sb-nl{background:var(--paper-2);border:1px solid var(--line);border-radius:6px;padding:1.5rem}
+  .sb-nl-heading{font-family:var(--display);font-weight:400;font-size:1.35rem;margin-bottom:.5rem}
+  .sb-nl-heading em{color:var(--taupe)}
+  .sb-nl-sub{font-size:.82rem;color:var(--ink-soft);line-height:1.5;margin-bottom:1rem}
+  .sb-nl-row{display:flex;gap:.4rem}
+  .sb-nl-input{
+    flex:1;border:1px solid var(--line);background:var(--paper);border-radius:4px;
+    padding:.55rem .7rem;font-family:var(--body);font-size:.82rem;color:var(--ink);
+  }
+  .sb-nl-input:focus{outline:none;border-color:var(--taupe)}
+  .sb-nl-btn{
+    width:40px;border:none;background:var(--ink);border-radius:4px;cursor:pointer;
+    display:grid;place-items:center;
+  }
+  .sb-nl-btn svg{width:16px;height:16px;fill:none;stroke:var(--paper);stroke-width:1.8}
+  .sb-shop{display:flex;gap:.9rem;text-decoration:none;color:inherit;align-items:center}
+  .sb-shop-img{width:74px;height:88px;border-radius:4px;background:var(--paper-2);border:1px solid var(--line);flex-shrink:0;overflow:hidden}
+  .sb-shop-svg{width:100%;height:100%}
+  .sb-shop-cat{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.25rem}
+  .sb-shop-title{font-family:var(--display);font-size:1.02rem;line-height:1.25;margin-bottom:.4rem}
+  .sb-shop-cta{font-size:.8rem;color:var(--accent);font-weight:600}
+
+  /* ARTICLE TYPE */
+  .lede{font-size:1.28rem;line-height:1.6;color:var(--ink);margin-bottom:1.8rem}
+  .lede::first-letter{
+    font-family:var(--display);float:left;font-size:4.4rem;line-height:.78;
+    padding:.35rem .55rem 0 0;color:var(--taupe);
+  }
+  .article p{margin-bottom:1.5rem;color:var(--ink-soft)}
+  .article p strong{color:var(--ink)}
+  .article h2{
+    font-family:var(--display);font-weight:400;line-height:1.12;
+    font-size:clamp(1.8rem,3.6vw,2.4rem);margin:3.4rem 0 1.4rem;
+  }
+  .article h2 em{color:var(--taupe)}
+  .h2-num{
+    display:block;font-family:var(--body);font-size:.74rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.9rem;
+  }
+  .article h3{
+    font-family:var(--display);font-weight:500;font-size:1.28rem;
+    margin:2.2rem 0 .9rem;color:var(--ink);
+  }
+  .inline-link{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--stone);transition:.2s}
+  .inline-link:hover{border-bottom-color:var(--accent)}
+
+  .editorial-list{margin:0 0 1.6rem;padding-left:0;list-style:none}
+  .editorial-list li{
+    position:relative;padding-left:1.7rem;margin-bottom:.9rem;color:var(--ink-soft);line-height:1.65;
+  }
+  .editorial-list li::before{
+    content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;
+    border:1px solid var(--taupe);border-radius:50%;
+  }
+  ol.editorial-list{counter-reset:edlist}
+  ol.editorial-list li::before{
+    content:counter(edlist);counter-increment:edlist;
+    border:none;width:auto;height:auto;top:0;
+    font-family:var(--display);color:var(--accent);font-size:1rem;font-weight:600;
+  }
+  .editorial-list li strong{color:var(--ink)}
+
+  /* CALLOUT */
+  .callout{
+    background:var(--paper-2);border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:4px;padding:1.6rem 1.8rem;margin:2.4rem 0;
+  }
+  .callout-eyebrow{
+    display:flex;align-items:center;gap:.5rem;font-size:.72rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.9rem;
+  }
+  .callout-eyebrow svg{width:16px;height:16px;fill:none;stroke:var(--accent);stroke-width:1.6}
+  .callout-heading{font-family:var(--display);font-weight:400;font-size:1.32rem;line-height:1.3;margin-bottom:.7rem}
+  .callout-heading em{color:var(--taupe);font-style:normal;border-bottom:2px solid var(--stone)}
+  .callout-body{font-size:.96rem;color:var(--ink-soft);line-height:1.6;margin:0}
+
+  /* STAT MODULE */
+  .stat-module{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
+    margin:2.6rem 0 1.2rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:1.8rem 0;
+  }
+  .stat-cell{text-align:center}
+  .stat-num{display:block;font-family:var(--display);font-size:2.6rem;line-height:1;color:var(--ink)}
+  .stat-unit{font-size:1.2rem;color:var(--taupe);margin-left:.1em}
+  .stat-label{display:block;font-size:.78rem;color:var(--ink-faint);margin-top:.6rem;letter-spacing:.02em}
+  .figure-caption{font-size:.8rem;color:var(--ink-faint);line-height:1.5;border-left:2px solid var(--line);padding-left:.9rem;margin-bottom:1.6rem}
+
+  /* FIGURE */
+  .article-figure{margin:2.6rem 0}
+  .article-figure-frame{border-radius:4px;overflow:hidden;aspect-ratio:4/3}
+  .article-figure-art{width:100%;height:100%}
+
+  /* PULL QUOTE */
+  .pull-quote{margin:3rem 0;text-align:center;padding:0 1rem}
+  .pull-quote-text{
+    font-family:var(--display);font-style:italic;font-weight:400;
+    font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.35;color:var(--ink);border:none;margin:0 0 1rem;
+  }
+  .pull-quote-attr{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+
+  /* MATERIAL BREAKDOWN */
+  .material-breakdown{border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:1.6rem 0 2.4rem}
+  .material-row{
+    display:grid;grid-template-columns:120px 1fr;gap:.4rem 1.4rem;
+    padding:1.1rem 1.4rem;border-bottom:1px solid var(--line);align-items:baseline;
+  }
+  .material-row:last-child{border-bottom:none}
+  .mat-label{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
+  .mat-title{font-family:var(--display);font-size:1.05rem;color:var(--ink);grid-column:2}
+  .mat-desc{font-size:.86rem;color:var(--ink-soft);grid-column:2;line-height:1.5}
+
+  /* EXPERT BLOCK */
+  .expert-block{display:flex;gap:1.2rem;background:var(--paper-2);border-radius:6px;padding:1.6rem 1.8rem;margin:2.6rem 0}
+  .expert-avatar svg{width:52px;height:52px;display:block;border-radius:50%;flex-shrink:0}
+  .expert-name{font-family:var(--display);font-size:1.1rem;color:var(--ink)}
+  .expert-role{font-size:.76rem;letter-spacing:.04em;color:var(--ink-faint);margin-bottom:.7rem}
+  .expert-quote{font-size:.98rem;font-style:italic;color:var(--ink-soft);line-height:1.6;margin:0}
+
+  /* SEPARATOR */
+  .ed-separator{text-align:center;margin:3rem 0}
+  .ed-separator-mark{color:var(--stone);font-size:1.8rem;letter-spacing:.6em}
+
+  /* AUTHOR MODULE */
+  .author-module{max-width:760px;margin:4rem auto 0;padding:0 1.5rem}
+  .author-module-inner{
+    display:flex;gap:1.4rem;align-items:flex-start;
+    border-top:1px solid var(--line);padding-top:2.4rem;
+  }
+  .author-mod-photo svg{width:64px;height:64px;border-radius:50%;flex-shrink:0}
+  .author-mod-eyebrow{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:.4rem}
+  .author-mod-name{font-family:var(--display);font-weight:400;font-size:1.5rem;margin-bottom:.6rem}
+  .author-mod-name em{color:var(--taupe)}
+  .author-mod-bio{font-size:.92rem;color:var(--ink-soft);line-height:1.6;margin-bottom:.9rem}
+  .author-mod-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+  .author-mod-tag{font-size:.72rem;padding:.28rem .65rem;border:1px solid var(--line);border-radius:100px;color:var(--ink-soft)}
+  .author-mod-cta{font-size:.82rem;color:var(--accent);font-weight:600;text-decoration:none;white-space:nowrap;margin-left:auto}
+
+  /* RELATED */
+  .related-section{max-width:1080px;margin:4.5rem auto 0;padding:3rem 1.5rem 0;border-top:1px solid var(--line)}
+  .related-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem}
+  .related-eyebrow{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:.5rem}
+  .related-heading{font-family:var(--display);font-weight:400;font-size:1.9rem}
+  .related-heading em{color:var(--taupe)}
+  .view-all{font-size:.82rem;color:var(--accent);font-weight:600;text-decoration:none}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+  .related-card{text-decoration:none;color:inherit;display:flex;flex-direction:column}
+  .related-img{border-radius:4px;overflow:hidden;aspect-ratio:4/3;margin-bottom:1rem}
+  .related-img-fill{width:100%;height:100%}
+  .related-cat{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.5rem}
+  .related-title{font-family:var(--display);font-weight:500;font-size:1.12rem;line-height:1.25;margin-bottom:.6rem}
+  .related-excerpt{font-size:.86rem;color:var(--ink-soft);line-height:1.5;margin-bottom:1rem;flex:1}
+  .related-footer{display:flex;justify-content:space-between;align-items:center}
+  .related-meta{font-size:.76rem;color:var(--ink-faint)}
+  .related-sep{margin:0 .4rem}
+  .related-read{font-size:.8rem;color:var(--accent);font-weight:600}
+
+  /* NEWSLETTER */
+  .nl-section{margin:5rem 0 0;background:var(--ink);color:var(--paper);padding:4.5rem 1.5rem}
+  .nl-inner{max-width:600px;margin:0 auto;text-align:center}
+  .nl-eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);font-weight:600;margin-bottom:1.2rem}
+  .nl-heading{font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15;margin-bottom:1rem}
+  .nl-heading em{color:var(--stone)}
+  .nl-sub{font-size:.95rem;color:#C9C0B4;line-height:1.6;margin-bottom:2rem}
+  .nl-input-row{display:flex;gap:.5rem;max-width:420px;margin:0 auto}
+  .nl-input{flex:1;border:1px solid #4A4138;background:#37302A;border-radius:4px;padding:.8rem 1rem;font-family:var(--body);font-size:.9rem;color:var(--paper)}
+  .nl-input:focus{outline:none;border-color:var(--stone)}
+  .nl-input::placeholder{color:#8A8076}
+  .nl-btn{border:none;background:var(--paper);color:var(--ink);border-radius:4px;padding:.8rem 1.3rem;font-family:var(--body);font-weight:600;font-size:.9rem;cursor:pointer;white-space:nowrap}
+  .nl-fine{font-size:.74rem;color:#8A8076;margin-top:1rem}
+  .nl-fine a{color:#C9C0B4}
+
+  @media(max-width:860px){
+    .article-wrap{grid-template-columns:1fr;gap:2.5rem}
+    .sidebar{position:static;order:2;border-top:1px solid var(--line);padding-top:2.5rem}
+    .related-grid{grid-template-columns:1fr}
+    .author-module-inner{flex-wrap:wrap}
+    .author-mod-cta{margin-left:0}
+    .nl-input-row{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+<main>
+<article>
+
+<!-- ARTICLE HERO -->
+<header class="article-hero">
+  <div class="article-hero-inner">
+    <div class="hero-category">Materials &amp; Craft</div>
+    <h1 class="hero-headline">What Is<br>Pima <em>Cotton?</em></h1>
+    <p class="hero-standfirst">
+      A clear, complete look at the long-fibre cotton that anchors the best basics: what it is, where it grows, what the label can and can't promise, and how to recognise it before you spend.
+    </p>
+    <div class="hero-meta">
+      <span class="hero-author-mini">
+        <span class="hero-author-avatar" aria-hidden="true">
+          <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="15" fill="#EDE9E1"/>
+            <ellipse cx="15" cy="13.5" rx="5" ry="5.5" fill="#CEBFB4"/>
+            <path d="M5 30 Q5 21 15 21 Q25 21 25 30 Z" fill="#C6C0B8"/>
+            <path d="M10.2 13 Q9.8 7.6 15 7.2 Q20.2 7.6 19.8 13 Q18.4 9.6 15 9.4 Q11.6 9.6 10.2 13Z" fill="#7A6A5E"/>
+          </svg>
+        </span>
+        <a href="#author">Nation Editorial</a>
+      </span>
+      <span class="meta-dot" aria-hidden="true"></span>
+      <span>Materials desk</span>
+      <span class="meta-dot" aria-hidden="true"></span>
+      <span>9 min read</span>
+      <span class="meta-dot" aria-hidden="true"></span>
+      <span class="hero-share" aria-label="Share article">
+        <button class="share-btn" aria-label="Share to X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4 L4 20" stroke-linecap="round"/></svg></button>
+        <button class="share-btn" aria-label="Share to LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></button>
+        <button class="share-btn" aria-label="Copy link"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></button>
+      </span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO IMAGE -->
+<div class="hero-image">
+  <div class="hero-image-frame">
+    <div class="hero-image-art"></div>
+    <div class="hero-cotton" aria-hidden="true">
+      <svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 195 Q70 150 90 110 Q100 90 115 75" stroke="#5A5046" stroke-width="1.5" fill="none" opacity="0.5"/>
+        <path d="M115 75 Q140 60 165 50" stroke="#5A5046" stroke-width="1.2" fill="none" opacity="0.5"/>
+        <path d="M90 110 Q72 100 65 88 Q80 92 92 105 Z" fill="#7A6A5E" opacity="0.45"/>
+        <path d="M140 70 Q155 60 168 65 Q158 78 142 78 Z" fill="#7A6A5E" opacity="0.45"/>
+        <g transform="translate(115,75)">
+          <ellipse cx="0" cy="0" rx="22" ry="20" fill="#F8F4ED"/>
+          <ellipse cx="-7" cy="-4" rx="9" ry="8" fill="#FFFFFF"/>
+          <ellipse cx="7" cy="-3" rx="9" ry="8" fill="#FFFFFF"/>
+          <ellipse cx="-5" cy="6" rx="9" ry="8" fill="#FFFFFF"/>
+          <ellipse cx="7" cy="6" rx="9" ry="8" fill="#FFFFFF"/>
+          <path d="M-22 12 L-15 22 L-6 17 L0 24 L7 17 L15 22 L22 12 Z" fill="#8A7A6E"/>
+        </g>
+        <g transform="translate(170,50)">
+          <ellipse cx="0" cy="0" rx="18" ry="16" fill="#F8F4ED"/>
+          <ellipse cx="-5" cy="-3" rx="7" ry="6.5" fill="#FFFFFF"/>
+          <ellipse cx="5" cy="-2" rx="7" ry="6.5" fill="#FFFFFF"/>
+          <ellipse cx="-4" cy="5" rx="7" ry="6.5" fill="#FFFFFF"/>
+          <ellipse cx="6" cy="5" rx="7" ry="6.5" fill="#FFFFFF"/>
+          <path d="M-18 10 L-12 18 L-5 14 L0 19 L5 14 L12 18 L18 10 Z" fill="#8A7A6E"/>
+        </g>
+        <g transform="translate(60,150)">
+          <ellipse cx="0" cy="0" rx="14" ry="12" fill="#F8F4ED" opacity="0.85"/>
+          <ellipse cx="-4" cy="-2" rx="5.5" ry="5" fill="#FFFFFF"/>
+          <ellipse cx="4" cy="-2" rx="5.5" ry="5" fill="#FFFFFF"/>
+          <ellipse cx="-3" cy="4" rx="5.5" ry="5" fill="#FFFFFF"/>
+          <ellipse cx="5" cy="4" rx="5.5" ry="5" fill="#FFFFFF"/>
+          <path d="M-14 8 L-9 14 L-4 11 L0 15 L4 11 L9 14 L14 8 Z" fill="#8A7A6E"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-image-overlay">A mature Pima boll, opened. The long fibres are what set it apart.</div>
+  </div>
+</div>
+
+<!-- ARTICLE LAYOUT -->
+<div class="article-wrap">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" aria-label="Article navigation and tools">
+    <div class="sidebar-block">
+      <div class="sidebar-eyebrow">In this article</div>
+      <nav class="toc-list" id="toc">
+        <a href="#section-1" class="toc-link"><span class="toc-num">01</span><span class="toc-text">What Pima Cotton Is</span></a>
+        <a href="#section-2" class="toc-link"><span class="toc-num">02</span><span class="toc-text">Where It Comes From</span></a>
+        <a href="#section-3" class="toc-link"><span class="toc-num">03</span><span class="toc-text">What "100% Pima" Promises</span></a>
+        <a href="#section-4" class="toc-link"><span class="toc-num">04</span><span class="toc-text">How It Compares</span></a>
+        <a href="#section-5" class="toc-link"><span class="toc-num">05</span><span class="toc-text">Is Pima Right For You</span></a>
+      </nav>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-eyebrow">Filed under</div>
+      <div class="tag-cloud">
+        <span class="tag-pill">Pima Cotton</span>
+        <span class="tag-pill">Materials</span>
+        <span class="tag-pill">Fibre Science</span>
+        <span class="tag-pill">Basics</span>
+      </div>
+    </div>
+
+    <div class="sidebar-block full">
+      <div class="sb-nl">
+        <h3 class="sb-nl-heading">The <em>Quarterly.</em></h3>
+        <p class="sb-nl-sub">Considered writing on materials, makers, and the things worth keeping.</p>
+        <form class="sb-nl-row" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='Thank you';">
+          <input type="email" class="sb-nl-input" placeholder="Enter your email" aria-label="Email">
+          <button type="submit" class="sb-nl-btn" aria-label="Subscribe"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-eyebrow">Shop the essentials</div>
+      <a href="https://nation.la/collections/peruvian-cotton" class="sb-shop">
+        <div class="sb-shop-img" aria-hidden="true">
+          <svg class="sb-shop-svg" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 180 L40 100 Q40 78 60 70 L80 62 L100 70 L120 62 L140 70 Q160 78 160 100 L160 180 Z" fill="#FAF7F1"/>
+            <path d="M80 62 Q90 80 100 82 Q110 80 120 62" fill="none" stroke="#D8CFC0" stroke-width="1.2"/>
+            <path d="M40 100 L30 95 L25 110 L35 115 Z" fill="#FAF7F1"/>
+            <path d="M160 100 L170 95 L175 110 L165 115 Z" fill="#FAF7F1"/>
+            <line x1="40" y1="140" x2="160" y2="140" stroke="#E5DDCE" stroke-width="0.8"/>
+            <line x1="40" y1="160" x2="160" y2="160" stroke="#E5DDCE" stroke-width="0.8"/>
+          </svg>
+        </div>
+        <div class="sb-shop-body">
+          <div class="sb-shop-cat">Collection</div>
+          <div class="sb-shop-title">Peruvian Cotton</div>
+          <span class="sb-shop-cta">Shop now →</span>
+        </div>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ARTICLE CONTENT -->
+  <div class="article">
+
+    <p class="lede">
+      Lay two white t-shirts side by side, one standard cotton and one Pima, and most people sort them by touch before they can say why. The Pima feels denser and smoother, with a faint coolness and a quiet sheen. It holds its shape against the palm instead of going limp. That difference is not a finish or a marketing tier. It comes down to the length of a single fibre.
+    </p>
+
+    <p>
+      Pima is one of the most misunderstood words on a clothing label. It gets used as a shorthand for "nice cotton" and quietly attached to garments that have little in common. So before it becomes a reason to spend more, it helps to know exactly what it is, where it grows, and what the word does, and does not, guarantee once it reaches a tee.
+    </p>
+
+    <h2 id="section-1">
+      <span class="h2-num">01 · What Pima Cotton Is</span>
+      A botanical fact, <em>not</em> a brand.
+    </h2>
+
+    <p>
+      Pima is a variety of <em>Gossypium barbadense</em>, one of four cultivated cotton species and the one that grows the longest, finest fibres. Those individual fibres are called the staple, and staple length is the single number that explains almost everything else. Pima sits in the category textile people call extra-long-staple, or ELS: the small, top tier of cotton with fibres long enough to behave differently in the spinning mill and on your skin.
+    </p>
+
+    <p>
+      The everyday cotton in most t-shirts is upland cotton, a different species with short fibres around an inch long. Pima's run roughly half again to twice that length. Longer fibres mean fewer loose ends poking out of the finished yarn, and fewer ends is the root of every quality people associate with the fabric: a smoother hand, a thread that spins stronger and finer, a surface that resists pilling, and a fibre that takes dye deeply and holds it.
+    </p>
+
+    <div class="callout">
+      <div class="callout-eyebrow">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        The short version
+      </div>
+      <h3 class="callout-heading">Pima is an <em>extra-long-staple</em> cotton with fibres up to twice the length of ordinary cotton.</h3>
+      <p class="callout-body">
+        That extra length is the whole story. It is why a well-made Pima tee feels softer, sheds fewer fuzzy ends, keeps its colour, and outlasts a cheaper one, not because the cotton was treated but because the fibre was longer to begin with.
+      </p>
+    </div>
+
+    <div class="stat-module">
+      <div class="stat-cell">
+        <span class="stat-num">1⅜<span class="stat-unit">in</span></span>
+        <span class="stat-label">Minimum staple to qualify as ELS</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">2<span class="stat-unit">×</span></span>
+        <span class="stat-label">Fibre length vs. standard cotton</span>
+      </div>
+      <div class="stat-cell">
+        <span class="stat-num">&lt;5<span class="stat-unit">%</span></span>
+        <span class="stat-label">ELS share of global cotton</span>
+      </div>
+    </div>
+    <p class="figure-caption" style="text-align:center;border-left:0;padding-left:0;margin-top:-.4rem;">
+      <em>Extra-long-staple cotton is graded by fibre length; figures are typical industry references for ELS varieties, of which Pima is one.</em>
+    </p>
+
+    <h2 id="section-2">
+      <span class="h2-num">02 · Where It Comes From</span>
+      One fibre, <em>three</em> homes.
+    </h2>
+
+    <p>
+      The name traces back to the Pima people of the American Southwest, who helped cultivate the early extra-long-staple crop on experimental farms in Arizona in the first decades of the twentieth century. The plant itself, though, descends from cotton grown along the coast of South America for thousands of years. Today three origins matter most, and the country on the label tells you less than the variety does.
+    </p>
+
+    <p>
+      <strong>The United States.</strong> Pima grows in California, Arizona, Texas and New Mexico. When a garment is made entirely of American-grown Pima and certified through the trade body that licenses it, it can carry the name Supima, a trademark, not a separate plant. All Supima is Pima; not all Pima is Supima.
+    </p>
+
+    <p>
+      <strong>Peru.</strong> The Peruvian crop, grown in coastal river valleys and often hand-picked, is among the most prized in the world for its softness and consistency. It is the fibre behind a good deal of luxury knitwear, and the backbone of our own <a href="https://nation.la/collections/peruvian-cotton" class="inline-link">Peruvian cotton</a> pieces.
+    </p>
+
+    <p>
+      <strong>Egypt and beyond.</strong> The celebrated Egyptian cottons belong to the same species as Pima, which is why the two feel like cousins. Pima is also grown in Australia and elsewhere. The takeaway: judge the fibre and the make, not the romance of a place name.
+    </p>
+
+    <div class="article-figure">
+      <div class="article-figure-frame">
+        <div class="article-figure-art" style="background:linear-gradient(160deg,#EFEAE1 0%,#DDD5C7 60%,#C5BBA8 100%);">
+          <svg width="100%" height="100%" viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs><radialGradient id="haze" cx="50%" cy="40%" r="60%"><stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient></defs>
+            <rect width="600" height="450" fill="url(#haze)"/>
+            <rect y="280" width="600" height="170" fill="#B8AC97" opacity="0.5"/>
+            <rect y="320" width="600" height="130" fill="#9F927C" opacity="0.4"/>
+            <path d="M0 280 L80 240 L160 270 L240 230 L320 265 L400 235 L480 270 L600 245 L600 290 L0 290 Z" fill="#A89B85" opacity="0.6"/>
+            <g opacity="0.85">
+              <circle cx="80" cy="350" r="10" fill="#F8F4ED"/><circle cx="150" cy="360" r="12" fill="#F8F4ED"/><circle cx="230" cy="345" r="9" fill="#F8F4ED"/><circle cx="310" cy="365" r="11" fill="#F8F4ED"/><circle cx="390" cy="355" r="10" fill="#F8F4ED"/><circle cx="470" cy="365" r="12" fill="#F8F4ED"/><circle cx="540" cy="350" r="9" fill="#F8F4ED"/>
+              <circle cx="50" cy="395" r="13" fill="#FFFFFF"/><circle cx="130" cy="405" r="11" fill="#FFFFFF"/><circle cx="210" cy="400" r="14" fill="#FFFFFF"/><circle cx="295" cy="410" r="12" fill="#FFFFFF"/><circle cx="380" cy="400" r="13" fill="#FFFFFF"/><circle cx="465" cy="408" r="11" fill="#FFFFFF"/><circle cx="550" cy="402" r="14" fill="#FFFFFF"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <p class="figure-caption">A coastal cotton field at harvest. <em>Peruvian Pima is often picked by hand over several passes so only fully matured bolls enter the bale.</em></p>
+    </div>
+
+    <h2 id="section-3">
+      <span class="h2-num">03 · What "100% Pima" Promises</span>
+      The fibre is <em>half</em> the answer.
+    </h2>
+
+    <p>
+      Here is the part most guides skip. A label reading 100% Pima tells you what the cotton is. It says nothing about how that cotton was turned into cloth, and two tees, both honestly 100% Pima, can feel a world apart. The fibre sets the ceiling. The make decides how close you get to it.
+    </p>
+
+    <p>
+      Three things separate a good Pima tee from a wasted one. <strong>Combing</strong> removes the shortest fibres and lines up the long ones in parallel, which is why combed Pima feels clean rather than fuzzy; uncombed yarn throws away the advantage. <strong>Ring-spinning</strong> twists the fibres into a finer, stronger, softer thread than the cheaper open-end method. And <strong>weight</strong>, measured in grams per square metre, decides drape and longevity. A featherweight knit will feel thin no matter how fine the fibre.
+    </p>
+
+    <p>
+      So when you pick up an <a href="https://nation.la/collections/core-basic-tees" class="inline-link">everyday cotton tee</a>, the questions worth asking are simple: is it combed and ring-spun, and what does it weigh? A label that lists those alongside the fibre is telling you it has nothing to hide.
+    </p>
+
+    <div class="pull-quote">
+      <blockquote class="pull-quote-text">"You are not paying for the cotton. You are paying for the length of the fibre, and everything that length makes possible."</blockquote>
+      <p class="pull-quote-attr">Nation · Materials Desk</p>
+    </div>
+
+    <h3>What to look for on the label</h3>
+
+    <div class="material-breakdown">
+      <div class="material-row">
+        <span class="mat-label">Fibre</span>
+        <span class="mat-title">100% Pima or Supima</span>
+        <span class="mat-desc">Extra-long-staple Gossypium barbadense. Watch for vague blends hiding behind the word "Pima."</span>
+      </div>
+      <div class="material-row">
+        <span class="mat-label">Yarn</span>
+        <span class="mat-title">Combed, ring-spun</span>
+        <span class="mat-desc">Combing removes short fibres; ring-spinning makes a finer, stronger, softer thread.</span>
+      </div>
+      <div class="material-row">
+        <span class="mat-label">Weight</span>
+        <span class="mat-title">Stated GSM</span>
+        <span class="mat-desc">Lightweight reads ~130–160, mid ~160–200, heavyweight 200+. Pick the weight to the purpose.</span>
+      </div>
+      <div class="material-row">
+        <span class="mat-label">Origin</span>
+        <span class="mat-title">Named, not implied</span>
+        <span class="mat-desc">Supima for US-grown; a stated origin for Peruvian Pima. Specifics signal a real supply chain.</span>
+      </div>
+    </div>
+
+    <div class="expert-block">
+      <div class="expert-avatar" aria-hidden="true">
+        <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="28" fill="#EDE9E1"/>
+          <ellipse cx="28" cy="25" rx="9" ry="10" fill="#CEBFB4"/>
+          <path d="M10 56 Q10 38 28 38 Q46 38 46 56 Z" fill="#A89B85"/>
+          <path d="M19 24 Q18 14 28 13 Q38 14 37 24 Q34 18 28 17.5 Q22 18 19 24Z" fill="#3A3128"/>
+        </svg>
+      </div>
+      <div>
+        <div class="expert-name">Nation Design Studio</div>
+        <div class="expert-role">On choosing a fibre</div>
+        <p class="expert-quote">"When we handle hundreds of garments, the difference shows up instantly: in the weight, the way it falls, how it holds its shape after a wash. Long fibre buys you all of that. The rest is making sure the spinning and the knit don't squander it."</p>
+      </div>
+    </div>
+
+    <div class="ed-separator" aria-hidden="true"><span class="ed-separator-mark">·</span></div>
+
+    <h2 id="section-4">
+      <span class="h2-num">04 · How It Compares</span>
+      Same family, <em>different</em> questions.
+    </h2>
+
+    <p>
+      Most of the confusion around Pima is really confusion about its neighbours. A quick map of where each one sits:
+    </p>
+
+    <ul class="editorial-list">
+      <li><strong>Pima vs. regular cotton.</strong> Standard upland cotton is shorter, rougher and cheaper; it pills sooner and loses shape faster. Pima costs several times more at the spool, and that cost is the reason most brands stop at upland.</li>
+      <li><strong>Pima vs. Supima.</strong> Not a contest. Supima is the trademarked guarantee that a Pima garment is 100% American-grown and verified. The plant is the same. Supima just puts a paper trail behind it.</li>
+      <li><strong>Pima vs. Egyptian.</strong> Both are the same species, both extra-long-staple at their best. "Egyptian cotton" is loosely policed as a term, so the named variety and the construction matter more than the word itself.</li>
+      <li><strong>Pima vs. organic.</strong> A category error worth clearing up. Pima describes the fibre's length; <a href="https://nation.la/collections/natural-fabrics" class="inline-link">organic cotton</a> describes how the plant was grown. They answer different questions, they can be the same garment, and organic Pima exists.</li>
+    </ul>
+
+    <h2 id="section-5">
+      <span class="h2-num">05 · Is Pima Right For You</span>
+      A fibre for keeping, <em>not</em> churning.
+    </h2>
+
+    <p>
+      Pima earns its place if you notice fabric and intend to keep your clothes. It is softer against the skin, it resists the surface fuzz that ages a cheaper tee within a season, it holds black as black and cream as clean, and it breathes well in heat. Spread over years of wear, the higher price quietly turns into a lower cost each time you put it on.
+    </p>
+
+    <p>
+      It is worth being clear-eyed, though. The word alone is not a promise. Pima knitted thin, spun cheaply, or skipped past the combing stage can still disappoint, which is exactly why the fibre, the yarn and the weight all have to line up. If you rotate through trend pieces every few months, the advantage is largely wasted on you. Pima rewards a wardrobe of fewer, better things.
+    </p>
+
+    <p>
+      If that is the wardrobe you are building, a single well-made piece is the easiest way to feel the difference for yourself. The <a href="https://nation.la/products/loren-tee-white" class="inline-link">Loren Tee</a> is where most people start. Treat it simply: wash cold and inside out, only when it needs it, lay flat or tumble on low, and fold rather than hang so the knit keeps its shape.
+    </p>
+
+    <p>
+      A fibre that spent the better part of a year in the field tends to ask for a little patience in return. Give it that, and it stays with you long past the season you bought it in.
+    </p>
+
+  </div>
+</div>
+
+<!-- AUTHOR MODULE -->
+<section class="author-module" id="author" aria-labelledby="author-mod-name">
+  <div class="author-module-inner">
+    <div class="author-mod-photo" aria-hidden="true">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="60" fill="#EDE9E1"/>
+        <ellipse cx="60" cy="50" rx="20" ry="22" fill="#CEBFB4"/>
+        <path d="M22 120 Q22 84 60 84 Q98 84 98 120 Z" fill="#C6C0B8"/>
+        <path d="M38 48 Q37 22 60 20 Q83 22 82 48 Q76 32 60 30 Q44 32 38 48Z" fill="#7A6A5E"/>
+        <path d="M38 48 Q34 64 38 78 L46 66 Q40 56 38 48Z" fill="#7A6A5E"/>
+        <path d="M82 48 Q86 64 82 78 L74 66 Q80 56 82 48Z" fill="#7A6A5E"/>
+      </svg>
+    </div>
+    <div class="author-mod-info">
+      <div class="author-mod-eyebrow">Written by</div>
+      <h2 class="author-mod-name" id="author-mod-name">Nation <em>Editorial</em></h2>
+      <p class="author-mod-bio">
+        The Nation Los Angeles materials desk writes about fibre, construction and the quiet decisions that separate a garment worth keeping from one built to be replaced.
+      </p>
+      <div class="author-mod-tags">
+        <span class="author-mod-tag">Materials</span>
+        <span class="author-mod-tag">Fibre Science</span>
+        <span class="author-mod-tag">Slow Fashion</span>
+      </div>
+    </div>
+    <a href="https://nation.la/journal" class="author-mod-cta">View all articles →</a>
+  </div>
+</section>
+</article>
+
+<!-- RELATED ARTICLES -->
+<section class="related-section" aria-labelledby="related-heading">
+  <div class="related-header">
+    <div>
+      <p class="related-eyebrow">Continue reading</p>
+      <h2 class="related-heading" id="related-heading">Keep <em>reading</em></h2>
+    </div>
+    <a href="https://nation.la/journal" class="view-all">View all journal →</a>
+  </div>
+  <div class="related-grid">
+    <article class="related-card">
+      <div class="related-img"><div class="related-img-fill" style="background:linear-gradient(140deg,#E0DAD0 0%,#C8C0B2 100%);"></div></div>
+      <div class="related-body">
+        <div class="related-cat">Comparisons</div>
+        <h3 class="related-title">Pima vs. Supima: Are They the Same Thing?</h3>
+        <p class="related-excerpt">Supima is a trademark, not a separate plant. What the mark actually verifies, and whether it matters for a t-shirt.</p>
+        <div class="related-footer"><div class="related-meta"><span>Materials</span><span class="related-sep">·</span><span>6 min</span></div><span class="related-read">Read →</span></div>
+      </div>
+    </article>
+    <article class="related-card">
+      <div class="related-img"><div class="related-img-fill" style="background:linear-gradient(140deg,#C8C2BA 0%,#B4ADA0 100%);"></div></div>
+      <div class="related-body">
+        <div class="related-cat">Fibre Science</div>
+        <h3 class="related-title">Why Pima Feels Softer: Staple Length, Explained</h3>
+        <p class="related-excerpt">A closer look at the single property that drives softness, strength and pilling resistance in cotton.</p>
+        <div class="related-footer"><div class="related-meta"><span>Materials</span><span class="related-sep">·</span><span>7 min</span></div><span class="related-read">Read →</span></div>
+      </div>
+    </article>
+    <article class="related-card">
+      <div class="related-img"><div class="related-img-fill" style="background:linear-gradient(140deg,#DEDAD3 0%,#CAC6BF 100%);"></div></div>
+      <div class="related-body">
+        <div class="related-cat">Care &amp; Longevity</div>
+        <h3 class="related-title">How to Wash Pima Cotton Without Shrinking It</h3>
+        <p class="related-excerpt">Water temperature, drying and folding: the small habits that keep a premium cotton tee looking new for years.</p>
+        <div class="related-footer"><div class="related-meta"><span>Care</span><span class="related-sep">·</span><span>5 min</span></div><span class="related-read">Read →</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- NEWSLETTER CTA -->
+<section class="nl-section" aria-labelledby="nl-heading">
+  <div class="nl-inner">
+    <p class="nl-eyebrow">Subscribe</p>
+    <h2 class="nl-heading" id="nl-heading">Considered fashion writing,<br><em>delivered with intention.</em></h2>
+    <p class="nl-sub">Join readers receiving Nation's journal on materials, makers and the quieter pieces worth knowing.</p>
+    <form class="nl-form" id="nl-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('input').placeholder='Thank you';">
+      <div class="nl-input-row">
+        <input type="email" class="nl-input" placeholder="Enter your email" required aria-label="Email address" autocomplete="email">
+        <button type="submit" class="nl-btn">Subscribe →</button>
+      </div>
+      <p class="nl-fine">No spam. Unsubscribe anytime. Read our <a href="#">privacy policy</a>.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
