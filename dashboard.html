@@ -171,8 +171,8 @@ footer b{color:var(--ink-soft)}
     <p class="sec-intro">Each conclusion is triangulated across at least two datasets. <span class="tag evidence">Evidence</span> = corroborated by ≥2 signals. <span class="tag hypo">Hypothesis</span> = directionally supported, not yet provable with the data in hand.</p>
     <ul class="exec">
       <li><span class="en">1</span><div><b>The volume decline is real, not an attribution artifact.</b> Shopify <b>orders are down 30%</b> and orders-fulfilled down 32% YoY — a hard ledger count, immune to attribution modeling — alongside net sales −33%. Because the 2025 base sits pre-migration, the drop is coincident with the migration year. <span class="tag evidence">Evidence</span></div></li>
-      <li><span class="en">2</span><div><b>The technical migration was executed cleanly.</b> Brand and homepage equity transferred (homepage clicks −7%) and <b>product-page clicks grew +36%</b>. Redirects and indexing held where it was hardest. The loss is narrow and specific, not a broken migration. <span class="tag evidence">Evidence</span></div></li>
-      <li><span class="en">3</span><div><b>The one wound is the category layer.</b> Collection pages <b>lost ~53% of clicks</b> and <code>/collections/dresses</code> fell 8,609 → 1,195 — yet that page still draws <b>155K impressions</b>. The demand persists; what's missing is the content and link equity to capture it. <span class="tag evidence">Evidence</span></div></li>
+      <li><span class="en">2</span><div><b>The technical migration was executed cleanly.</b> Brand and homepage equity transferred (homepage clicks −7%) and <b>product-page clicks grew +36%</b>. Redirects and indexing held across brand, home and product — the one exception, a temporary failure to redirect the <code>/collections/dresses</code> URL (see Section 02), has since resolved. The loss is narrow and specific, not a broken migration. <span class="tag evidence">Evidence</span></div></li>
+      <li><span class="en">3</span><div><b>The growth gap is non-brand visibility — not a category demand loss.</b> The legacy <code>/collections/dresses</code> numbers were a <b>migration artifact</b>: the un-redirected page absorbed branded traffic for ~3 months (~5–10 → ~100 clicks/day) before Google dropped it. The reliable signal is clean query data — non-brand sits at position 24.7 → 28.9 (page 3) while category terms impress heavily; the current dresses page alone draws <b>155K impressions at 1,195 clicks</b>. Content + internal links capture that demand. <span class="tag evidence">Evidence</span></div></li>
       <li><span class="en">4</span><div><b>Non-brand is a visibility gap, and a content gap by design.</b> Category terms impress heavily ("top" 33K, "puff sleeve top" 16K) but sit at positions 10–90. The technical fixes were delivered; the supporting <b>editorial/content layer was pushed but historically constrained by brand choices</b> — and is now greenlit. <span class="tag evidence">Evidence</span></div></li>
       <li><span class="en">5</span><div><b>Revenue is held up by owned + paid loops, which masks the gap.</b> Email/retention (Klaviyo $841K + Repeat $723K, Jan–May) out-earns all paid combined, and <b>Klaviyo is the only channel lifting its share of new visitors (NVP +2.4)</b> while every acquisition channel brings fewer. Meta was scaled in May (spend +38%, ROAS 2.3) to defend the top line. <span class="tag evidence">Evidence</span></div></li>
       <li><span class="en">6</span><div><b>The "Direct is down" read is partly a measurement effect.</b> A large share of "Direct" sessions resolve to data-center cities (Ashburn, Council Bluffs +231%), and revenue re-bucketed from <code>None·None</code> (−39%) into <code>None·nation</code> (+76%) after migration. <span class="tag hypo">Hypothesis</span></div></li>
@@ -188,7 +188,7 @@ footer b{color:var(--ink-soft)}
       <div class="kpi pos"><div class="lab">Returning customer rate</div><div class="val">52.96%</div><div class="delta d-neu">▼ 4% YoY</div><div class="note">Retention comparatively intact</div></div>
     </div>
     <div class="grid g4" style="margin-top:16px">
-      <div class="kpi warnb"><div class="lab">Collection-page clicks (GSC)</div><div class="val">−53%</div><div class="delta d-neg">19,232 → 8,983</div><div class="note">The category layer — the fixable wound</div></div>
+      <div class="kpi warnb"><div class="lab">Collections (ex-dresses artifact)</div><div class="val">≈ −27%</div><div class="delta d-neg">raw −53% is inflated</div><div class="note">Dresses redirect glitch = 46% of legacy collection clicks</div></div>
       <div class="kpi warnb"><div class="lab">/collections/dresses impressions</div><div class="val">155K</div><div class="delta d-neu">clicks only 1,195</div><div class="note">Demand intact · capture weak</div></div>
       <div class="kpi warnb"><div class="lab">Non-brand avg. position</div><div class="val">28.9</div><div class="delta d-neg">▼ from 24.7</div><div class="note">Page 3 · unconverted demand</div></div>
       <div class="kpi pos"><div class="lab">Blog content program</div><div class="val">100</div><div class="delta d-pos">articles, 7 hubs — greenlit</div><div class="note">The unlock for non-brand</div></div>
@@ -213,7 +213,7 @@ footer b{color:var(--ink-soft)}
           <span><i style="background:#5E7355"></i>Products</span>
           <span><i style="background:#CEBFB4"></i>Info pages</span>
         </div>
-        <p class="fnote">Collections fell from <b>46% → 28%</b> of organic page clicks while products rose from <b>15% → 26%</b>. The category layer shrank as a share of discovery; the product layer expanded. This holds regardless of window length.</p>
+        <p class="fnote">Raw shares show collections falling 46% → 28% and products rising 15% → 26%. But a single page — <code>/collections/dresses</code> — accounts for <b>46% of legacy collection clicks</b>, almost all of it a 3-month redirect artifact (see note below). Strip it out and collections move only <b>32% → 25%</b>. The artifact-free signal is <b>position</b>, in the next panel.</p>
       </div>
       <div class="card">
         <h3>Position &amp; share — the clean comparisons</h3>
@@ -225,11 +225,12 @@ footer b{color:var(--ink-soft)}
             <tr><td>Non-brand avg position</td><td class="num">24.66</td><td class="num">28.87</td><td class="num neg">+4.2 worse</td></tr>
             <tr><td>Non-brand share of clicks</td><td class="num">4.5%</td><td class="num">6.6%</td><td class="num">+2.1pp</td></tr>
             <tr><td>Homepage share of page clicks</td><td class="num">33%</td><td class="num">39%</td><td class="num pos">+6pp</td></tr>
-            <tr><td>Collections share of page clicks</td><td class="num">46%</td><td class="num">28%</td><td class="num neg">−18pp</td></tr>
+            <tr><td>Collections share of page clicks (raw)</td><td class="num">46%</td><td class="num">28%</td><td class="num neg">−18pp</td></tr>
+            <tr><td>Collections share <b>ex-dresses artifact</b></td><td class="num">32%</td><td class="num">25%</td><td class="num neg">−7pp</td></tr>
             <tr><td>Products share of page clicks</td><td class="num">15%</td><td class="num">26%</td><td class="num pos">+11pp</td></tr>
           </tbody>
         </table>
-        <p class="fnote">Brand still ranks strongly (5.6 → 7.7); non-brand sits on page 3 on both domains (24.7 → 28.9). The discovery mix moved decisively away from category pages and toward products + homepage.</p>
+        <p class="fnote">Brand still ranks strongly (5.6 → 7.7); non-brand sits on page 3 on both domains (24.7 → 28.9). Once the dresses artifact is removed, the discovery mix is broadly stable — products gained, collections eased modestly. Position, not click volume, is the dependable lens here.</p>
       </div>
     </div>
 
@@ -241,16 +242,16 @@ footer b{color:var(--ink-soft)}
         <tbody>
           <tr><td>Homepage clicks</td><td class="num">13,774</td><td class="num">12,746</td><td class="num">−7%</td><td>Brand / homepage equity transferred cleanly</td></tr>
           <tr><td>Product-page clicks</td><td class="num">6,187</td><td class="num">8,434</td><td class="num pos">+36%</td><td>Product layer held and grew (more PDPs indexed: 744 → 811)</td></tr>
-          <tr><td>Collection-page clicks</td><td class="num">19,232</td><td class="num">8,983</td><td class="num neg">−53%</td><td>Category layer weakened — corroborated by share (−18pp)</td></tr>
+          <tr><td>Collection-page clicks</td><td class="num">19,232</td><td class="num">8,983</td><td class="num neg">−53%</td><td>Inflated by dresses artifact; ex-dresses ≈ <b>−27%</b> (see note)</td></tr>
           <tr><td>Info-page clicks</td><td class="num">2,369</td><td class="num">2,338</td><td class="num">−1%</td><td>Service content stable</td></tr>
-          <tr><td><code>/collections/dresses</code> clicks</td><td class="num">8,609</td><td class="num">1,195</td><td class="num neg">−86%</td><td>Signature category casualty</td></tr>
-          <tr><td><code>/collections/dresses</code> impressions</td><td class="num">225,604</td><td class="num">155,487</td><td class="num">−31%</td><td><b>Demand still large</b> — capture, not demand, is the gap</td></tr>
+          <tr><td><code>/collections/dresses</code> clicks</td><td class="num">8,609</td><td class="num">1,195</td><td class="num neg">−86%</td><td><b>Migration redirect artifact</b> — not a baseline (see note)</td></tr>
+          <tr><td><code>/collections/dresses</code> impressions</td><td class="num">225,604</td><td class="num">155,487</td><td class="num">−31%</td><td>Current page still draws real category demand</td></tr>
         </tbody>
       </table>
-      <p class="fnote">Reconciling the two views: in <b>share</b> terms (window-independent) collections fell 46% → 28% of organic clicks; in <b>absolute</b> top-1,000 clicks the same shift reads −53%, amplified by the legacy property's longer active window. Both point the same direction — the share figure is the conservative measure, the absolute the upper bound. We rely on the share figure for any decision.</p>
+      <p class="fnote">The big driver of the inflated collections delta is one page. <code>/collections/dresses</code> failed to redirect cleanly at migration: for ~3 months (late May → early Sep 2025) the stale legacy URL kept ranking and <b>absorbed branded query traffic</b>, briefly out-earning the homepage and jumping from its usual <b>~5–10 clicks/day to ~100/day</b> before Google dropped it (clicks fell to zero after ~5 Sep 2025). That single page is <b>46% of legacy collection clicks</b>. Strip it out and collections decline ≈ <b>−27%</b>, not −53%. We rely on the artifact-free signals — position and the share figure ex-dresses — for any decision.</p>
     </div>
 
-    <div class="callout good" style="margin-top:18px"><span class="ct">Reading the two states</span> On every window-independent measure — brand transfer, homepage equity, product indexing — Nation's migration held or improved. The single area that lost ground is the <b>commercial category layer</b>, the part that converts non-brand search into new customers. And because <code>/collections/dresses</code> still draws 155K impressions, the demand is intact; what is missing is the content and link equity to capture it. That is a content-and-links problem, not a redirect problem — and it is squarely fixable. <span class="tag evidence">Evidence</span></div>
+    <div class="callout good" style="margin-top:18px"><span class="ct">Reading the two states</span> On every artifact-free measure — brand transfer, homepage equity, product indexing, position — Nation's migration held or improved. The one visible glitch, the <code>/collections/dresses</code> redirect lag, has resolved. So the post-migration picture is <b>not</b> a category collapse. The genuine, standing limitation is that <b>non-brand visibility was never fully built</b> (page-3 positions, historically brand-constrained content) — and the current category pages still attract large impression-level demand (dresses: 155K impressions, 1,195 clicks) waiting to be captured. That is a content-and-links opportunity, now greenlit. <span class="tag evidence">Evidence</span></div>
   </section>
 
   <section id="channels">
@@ -321,7 +322,7 @@ footer b{color:var(--ink-soft)}
           <span><i style="background:#CEBFB4"></i>Legacy nationltd.com</span>
           <span><i style="background:#5E7355"></i>Current nation.la</span>
         </div>
-        <p class="fnote">Homepage held (−7%) · Products grew (+36%) · <b>Collections −53%</b> · Info-pages flat.</p>
+        <p class="fnote">Homepage held (−7%) · Products grew (+36%) · Collections −27% ex-artifact (raw −53% is inflated by the dresses redirect glitch — see §02) · Info-pages flat.</p>
       </div>
     </div>
 
@@ -346,13 +347,13 @@ footer b{color:var(--ink-soft)}
 
       <div class="card">
         <h3>Collection demand vs captured clicks</h3>
-        <p class="cap">Key collection pages still impress heavily — but convert a fraction of legacy clicks.</p>
+        <p class="cap">Key category pages draw heavy impressions today but convert only a sliver — the uncaptured demand the content program targets.</p>
         <div class="chart-box"><canvas id="collChart"></canvas></div>
         <div class="legend">
           <span><i style="background:#9A6F4E"></i>Impressions (demand, current)</span>
           <span><i style="background:#5E7355"></i>Clicks (current)</span>
         </div>
-        <p class="fnote">Dresses: 155K impressions → 1,195 clicks. Tops: 178K → 1,455. The gap is the prize that internal linking + supporting content reclaims.</p>
+        <p class="fnote">Dresses: 155K impressions → 1,195 clicks. Tops: 178K → 1,455. This is current nation.la demand, artifact-free — the gap internal linking + supporting content reclaims.</p>
       </div>
     </div>
 
@@ -362,8 +363,8 @@ footer b{color:var(--ink-soft)}
       <div class="grid g4" style="margin-top:6px">
         <div style="border:1px solid var(--line);border-radius:10px;padding:14px;background:var(--paper)">
           <div class="tag evidence" style="margin-bottom:8px">Primary</div>
-          <b style="font-size:13.5px">Category authority &amp; link equity</b>
-          <p style="font-size:12px;color:var(--ink-faint);margin-top:6px">Collections −53%, non-brand position decay, dresses shift. Brand/product held → the loss is specific to category pages and their supporting links.</p>
+          <b style="font-size:13.5px">Under-built non-brand layer</b>
+          <p style="font-size:12px;color:var(--ink-faint);margin-top:6px">Non-brand sits at page 3 (24.7 → 28.9) with category terms impressing at positions 10–90. Category content &amp; supporting links were never fully built (brand-constrained) — capping non-brand capture. Not a migration loss.</p>
         </div>
         <div style="border:1px solid var(--line);border-radius:10px;padding:14px;background:var(--paper)">
           <div class="tag evidence" style="margin-bottom:8px">Contributing</div>
@@ -381,7 +382,7 @@ footer b{color:var(--ink-soft)}
           <p style="font-size:12px;color:var(--ink-faint);margin-top:6px">Impressions on category terms remain high, so underlying search demand persists. The issue is capture, not demand.</p>
         </div>
       </div>
-      <div class="callout good" style="margin-top:16px"><span class="ct">SEO verdict</span> The migration's SEO cost is <b>concentrated in category authority and the content layer feeding it</b> — not demand, not brand, not a broken migration. That is the most fixable kind of gap, and it explains why retention looks fine while new-customer growth stalls. <span class="tag evidence">Evidence</span></div>
+      <div class="callout good" style="margin-top:16px"><span class="ct">SEO verdict</span> The migration itself was clean — brand, homepage and product all transferred, and the one redirect glitch (dresses) has resolved. The standing limitation is that <b>the non-brand / category content layer was never fully built</b>, leaving page-3 positions on terms that already draw heavy impressions. That is a build opportunity, not breakage — and it explains why retention looks fine while new-customer growth stalls. <span class="tag evidence">Evidence</span></div>
     </div>
   </section>
 
@@ -496,7 +497,7 @@ footer b{color:var(--ink-soft)}
           <div class="item"><b>Ship the Quick-Win articles (low difficulty, high intent).</b><span class="why">From the plan's QW bucket — fastest to rank, strongest conversion: "How to wash Pima without shrinking" (Diff 3), "How our tees should fit" (Diff 3), "Relaxed vs slim vs boxy", "How to tell if a tee is well made" (Diff 4), "Fold vs hang".</span>
             <div class="pillchips"><span class="pc">QW bucket</span><span class="pc">Care &amp; Fit hubs</span><span class="pc">≤4 difficulty</span></div>
           </div>
-          <div class="item"><b>Internal-link every article down to <code>/collections/</code> with intent-matched anchors.</b><span class="why">Prioritize the high-demand losers first: <code>/collections/dresses</code> (155K impr) and <code>/collections/tops</code> (178K impr) — recover impressions already in hand.</span></div>
+          <div class="item"><b>Internal-link every article down to <code>/collections/</code> with intent-matched anchors.</b><span class="why">Prioritize the highest-impression category pages first: <code>/collections/dresses</code> (155K impr) and <code>/collections/tops</code> (178K impr) — capture demand already in hand.</span></div>
           <div class="item"><b>Build link equity to the near-invisible target collections.</b><span class="why">core-collection, elevated-essentials, capsule-wardrobe, 100-cotton, white-tees, neutral-tones are absent from the top-1,000 pages — the blog's anchors point straight at them.</span></div>
           <div class="item"><b>Clear residual indexing noise.</b><span class="why">Resolve the stray "site:myshopify.com" surfacing and the deep-position pages (78–91) flagged in Section 04 — small, fast technical clean-up.</span></div>
         </div>
