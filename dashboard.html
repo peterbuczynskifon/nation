@@ -174,7 +174,7 @@ footer b{color:var(--ink-soft)}
       <li><span class="en">2</span><div><b>The technical migration was executed cleanly.</b> Brand and homepage equity transferred (homepage clicks −7%) and <b>product-page clicks grew +36%</b>. Redirects and indexing held where it was hardest. The loss is narrow and specific, not a broken migration. <span class="tag evidence">Evidence</span></div></li>
       <li><span class="en">3</span><div><b>The one wound is the category layer.</b> Collection pages <b>lost ~53% of clicks</b> and <code>/collections/dresses</code> fell 8,609 → 1,195 — yet that page still draws <b>155K impressions</b>. The demand persists; what's missing is the content and link equity to capture it. <span class="tag evidence">Evidence</span></div></li>
       <li><span class="en">4</span><div><b>Non-brand is a visibility gap, and a content gap by design.</b> Category terms impress heavily ("top" 33K, "puff sleeve top" 16K) but sit at positions 10–90. The technical fixes were delivered; the supporting <b>editorial/content layer was pushed but historically constrained by brand choices</b> — and is now greenlit. <span class="tag evidence">Evidence</span></div></li>
-      <li><span class="en">5</span><div><b>Revenue is held up by owned + paid loops, which masks the gap.</b> Email/retention (Klaviyo $866K + Repeat $792K) out-earns all paid combined, and <b>Klaviyo is the only channel gaining efficiency (NVP +2.4)</b>. Meta was scaled in May (spend +38%, ROAS 2.3) to defend the top line. <span class="tag evidence">Evidence</span></div></li>
+      <li><span class="en">5</span><div><b>Revenue is held up by owned + paid loops, which masks the gap.</b> Email/retention (Klaviyo $841K + Repeat $723K, Jan–May) out-earns all paid combined, and <b>Klaviyo is the only channel lifting its share of new visitors (NVP +2.4)</b> while every acquisition channel brings fewer. Meta was scaled in May (spend +38%, ROAS 2.3) to defend the top line. <span class="tag evidence">Evidence</span></div></li>
       <li><span class="en">6</span><div><b>The "Direct is down" read is partly a measurement effect.</b> A large share of "Direct" sessions resolve to data-center cities (Ashburn, Council Bluffs +231%), and revenue re-bucketed from <code>None·None</code> (−39%) into <code>None·nation</code> (+76%) after migration. <span class="tag hypo">Hypothesis</span></div></li>
       <li><span class="en">7</span><div><b>Growth ceiling = organic non-brand acquisition. The fix is content + internal linking to collections.</b> Retention is healthy (returning-customer rate 53%). The new topical-authority blog program, link-built down to the high-demand collection pages, is the highest-leverage move available. <span class="tag evidence">Evidence</span></div></li>
     </ul>
@@ -193,41 +193,69 @@ footer b{color:var(--ink-soft)}
       <div class="kpi warnb"><div class="lab">Non-brand avg. position</div><div class="val">28.9</div><div class="delta d-neg">▼ from 24.7</div><div class="note">Page 3 · unconverted demand</div></div>
       <div class="kpi pos"><div class="lab">Blog content program</div><div class="val">100</div><div class="delta d-pos">articles, 7 hubs — greenlit</div><div class="note">The unlock for non-brand</div></div>
     </div>
+    <div class="callout warn" style="margin-top:18px"><span class="ct">Caveat on the YoY decline — attribution ≠ causation</span> Orders −30% is a real, hard count, but the 2025 comparison base sits <b>before</b> the migration, so part of the gap could reflect broader market, category, or assortment shifts rather than the migration itself. We are showing a <b>timing coincidence, not proven causation</b>. Isolating the migration's specific contribution would need a category/market benchmark (e.g. comparable women's-apparel demand trends) to net out the conditions every brand faced this year.</div>
   </section>
 
   <section id="migration">
     <div class="sec-head"><span class="sec-num">02</span><h2>Migration: <em>Before → After</em></h2></div>
-    <p class="sec-intro">Drawn directly from the GSC footprint of each domain. This is a clean two-state comparison — legacy <code>nationltd.com</code> against current <code>nation.la</code> — not a speculative timeline. Every figure below is observed in the data.</p>
-    <div class="ba">
-      <div class="col">
-        <div class="rib" style="background:var(--taupe)"></div>
-        <h4>Before</h4>
-        <div class="dom">nationltd.com — legacy footprint</div>
-        <ul>
-          <li>Brand terms ranked <b>position 5.6</b>; non-brand at 24.7</li>
-          <li><code>/collections/dresses</code> was the #2 page site-wide — <b>8,609 clicks</b></li>
-          <li>Collection pages drove <b>19,232 clicks</b> (the acquisition engine)</li>
-          <li>Homepage <b>13,774 clicks</b>; products 6,187</li>
-        </ul>
+    <p class="sec-intro">A like-for-like read of the GSC footprint — legacy <code>nationltd.com</code> against current <code>nation.la</code>. To keep the comparison honest, the primary lenses are <b>composition (share of clicks)</b> and <b>average position</b>, both independent of how long each property was active. Absolute click totals follow, with the reporting-window caveat applied so nothing is overstated.</p>
+
+    <div class="callout warn" style="margin-bottom:20px"><span class="ct">How to read this fairly — methodology</span> The two GSC properties do <b>not</b> cover identical active windows: the legacy domain logged most of its clicks while it was the live site (pre- and at-migration), and the current domain accrues clicks after the redirect. Both exports are also capped at each domain's <b>top 1,000 rows</b>. As a result, raw <b>absolute volume deltas overstate the real change</b> — a metric can fall simply because the legacy property had more active reporting time. The trustworthy signals are <b>share-of-clicks</b> and <b>average position</b>, which do not depend on window length. The composition shift below is therefore the conservative, window-independent proof; absolute figures are shown afterward as directional only.</div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>Composition of organic page clicks <span class="tag evidence">Window-independent</span></h3>
+        <p class="cap">Share of each property's page clicks by type — the like-for-like measure.</p>
+        <div class="chart-box short"><canvas id="mixShiftChart"></canvas></div>
+        <div class="legend">
+          <span><i style="background:#7A6A5E"></i>Homepage</span>
+          <span><i style="background:#9A6F4E"></i>Collections</span>
+          <span><i style="background:#5E7355"></i>Products</span>
+          <span><i style="background:#CEBFB4"></i>Info pages</span>
+        </div>
+        <p class="fnote">Collections fell from <b>46% → 28%</b> of organic page clicks while products rose from <b>15% → 26%</b>. The category layer shrank as a share of discovery; the product layer expanded. This holds regardless of window length.</p>
       </div>
-      <div class="col">
-        <div class="rib" style="background:var(--accent)"></div>
-        <h4>After</h4>
-        <div class="dom">nation.la — current footprint</div>
-        <ul>
-          <li>Brand <b>12,746 homepage clicks (−7%)</b> — equity transferred well</li>
-          <li>Products <b>8,434 clicks (+36%)</b> — product layer recovered</li>
-          <li>Collections <b>8,983 clicks (−53%)</b> — the category layer slipped</li>
-          <li>Dresses <b>1,195 clicks</b>, but still <b>155K impressions</b> of live demand</li>
-        </ul>
+      <div class="card">
+        <h3>Position &amp; share — the clean comparisons</h3>
+        <p class="cap">Average position and click-share do not depend on the reporting window.</p>
+        <table>
+          <thead><tr><th>Metric</th><th class="num">Before</th><th class="num">After</th><th class="num">Δ</th></tr></thead>
+          <tbody>
+            <tr><td>Brand-query avg position</td><td class="num">5.64</td><td class="num">7.66</td><td class="num neg">+2.0 worse</td></tr>
+            <tr><td>Non-brand avg position</td><td class="num">24.66</td><td class="num">28.87</td><td class="num neg">+4.2 worse</td></tr>
+            <tr><td>Non-brand share of clicks</td><td class="num">4.5%</td><td class="num">6.6%</td><td class="num">+2.1pp</td></tr>
+            <tr><td>Homepage share of page clicks</td><td class="num">33%</td><td class="num">39%</td><td class="num pos">+6pp</td></tr>
+            <tr><td>Collections share of page clicks</td><td class="num">46%</td><td class="num">28%</td><td class="num neg">−18pp</td></tr>
+            <tr><td>Products share of page clicks</td><td class="num">15%</td><td class="num">26%</td><td class="num pos">+11pp</td></tr>
+          </tbody>
+        </table>
+        <p class="fnote">Brand still ranks strongly (5.6 → 7.7); non-brand sits on page 3 on both domains (24.7 → 28.9). The discovery mix moved decisively away from category pages and toward products + homepage.</p>
       </div>
     </div>
-    <div class="callout good" style="margin-top:18px"><span class="ct">Reading the two states</span> Where migrations usually break — brand transfer, homepage equity, product indexing — Nation's held or improved. The single area that did not fully carry over is the <b>commercial category layer</b>, which is the layer that converts non-brand search into new customers. That is a content-and-links problem, not a redirect problem, and it is squarely fixable. <span class="tag evidence">Evidence</span></div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>Absolute figures — same metric on both domains, window caveat applied</h3>
+      <p class="cap">Every row compares the identical metric across the two properties (within each top-1,000 export). Read Δ as directional, not exact — see methodology above.</p>
+      <table>
+        <thead><tr><th>Metric · GSC ~16-mo footprint</th><th class="num">Before · nationltd.com</th><th class="num">After · nation.la</th><th class="num">Δ (directional)</th><th>Interpretation</th></tr></thead>
+        <tbody>
+          <tr><td>Homepage clicks</td><td class="num">13,774</td><td class="num">12,746</td><td class="num">−7%</td><td>Brand / homepage equity transferred cleanly</td></tr>
+          <tr><td>Product-page clicks</td><td class="num">6,187</td><td class="num">8,434</td><td class="num pos">+36%</td><td>Product layer held and grew (more PDPs indexed: 744 → 811)</td></tr>
+          <tr><td>Collection-page clicks</td><td class="num">19,232</td><td class="num">8,983</td><td class="num neg">−53%</td><td>Category layer weakened — corroborated by share (−18pp)</td></tr>
+          <tr><td>Info-page clicks</td><td class="num">2,369</td><td class="num">2,338</td><td class="num">−1%</td><td>Service content stable</td></tr>
+          <tr><td><code>/collections/dresses</code> clicks</td><td class="num">8,609</td><td class="num">1,195</td><td class="num neg">−86%</td><td>Signature category casualty</td></tr>
+          <tr><td><code>/collections/dresses</code> impressions</td><td class="num">225,604</td><td class="num">155,487</td><td class="num">−31%</td><td><b>Demand still large</b> — capture, not demand, is the gap</td></tr>
+        </tbody>
+      </table>
+      <p class="fnote">Reconciling the two views: in <b>share</b> terms (window-independent) collections fell 46% → 28% of organic clicks; in <b>absolute</b> top-1,000 clicks the same shift reads −53%, amplified by the legacy property's longer active window. Both point the same direction — the share figure is the conservative measure, the absolute the upper bound. We rely on the share figure for any decision.</p>
+    </div>
+
+    <div class="callout good" style="margin-top:18px"><span class="ct">Reading the two states</span> On every window-independent measure — brand transfer, homepage equity, product indexing — Nation's migration held or improved. The single area that lost ground is the <b>commercial category layer</b>, the part that converts non-brand search into new customers. And because <code>/collections/dresses</code> still draws 155K impressions, the demand is intact; what is missing is the content and link equity to capture it. That is a content-and-links problem, not a redirect problem — and it is squarely fixable. <span class="tag evidence">Evidence</span></div>
   </section>
 
   <section id="channels">
     <div class="sec-head"><span class="sec-num">03</span><h2>Channel System <em>Decomposition</em></h2></div>
-    <p class="sec-intro">Full-funnel view of the post-migration period (Triple Whale, Jan–Jun 2026). The focus is interaction effects — how channels prop each other up — over isolated scorecards. June is a partial month (1–7) throughout.</p>
+    <p class="sec-intro">Full-funnel view of the post-migration period (Triple Whale). All figures here use <b>complete months only — January to May 2026</b>; the partial June (1–7) is excluded so the trend does not show a false month-end cliff. The focus is interaction effects — how channels prop each other up — over isolated scorecards.</p>
 
     <div class="grid g2">
       <div class="card">
@@ -246,7 +274,7 @@ footer b{color:var(--ink-soft)}
 
       <div class="card">
         <h3>The owned-vs-bought balance</h3>
-        <p class="cap">$2.09M of attributed revenue carries zero media cost.</p>
+        <p class="cap">$1.97M of attributed revenue (Jan–May) carries zero media cost.</p>
         <div class="chart-box short"><canvas id="ownedChart"></canvas></div>
         <div class="callout good" style="margin-top:14px"><span class="ct">Interaction effect</span> Klaviyo and Repeat Customer do not <i>create</i> demand — they <b>harvest</b> it, converting visitors that brand search, organic and paid acquired first. Their dominance shows the business monetizing its base efficiently while the <b>acquisition feeder (organic non-brand) is under-fed.</b></div>
       </div>
@@ -254,17 +282,17 @@ footer b{color:var(--ink-soft)}
 
     <div class="card" style="margin-top:20px">
       <h3>Channel role &amp; trajectory matrix</h3>
-      <p class="cap">Volume from TW Pixel CV (period total) · efficiency from NVP (Dec'25–May'26 vs prior) · role from funnel position.</p>
+      <p class="cap">Volume from TW Pixel CV (Jan–May 2026, complete months) · NVP = Triple Whale Pixel New Visitor Percent (Dec'25–May'26 vs prior) · role from funnel position.</p>
       <table>
         <thead><tr><th>Channel</th><th class="num">Attr. revenue</th><th class="num">NVP</th><th class="num">NVP Δ</th><th>Functional role</th><th>Read</th></tr></thead>
         <tbody>
-          <tr><td><b>Meta</b></td><td class="num">$946.8K</td><td class="num">86.97%</td><td class="num neg">−6.3</td><td>Acquisition + assist</td><td>Biggest engine; scaled in May, efficiency softening</td></tr>
-          <tr><td><b>Klaviyo</b></td><td class="num">$865.6K</td><td class="num">79.22%</td><td class="num pos">+2.4</td><td>Retention / harvest</td><td><b>Only rising-efficiency channel</b> — protect it</td></tr>
-          <tr><td><b>Repeat Customer</b></td><td class="num">$792.3K</td><td class="num">—</td><td class="num">—</td><td>Retention</td><td>Loyalty base healthy (RCR 53%)</td></tr>
-          <tr><td><b>Google Ads</b></td><td class="num">$568.7K</td><td class="num">85.17%</td><td class="num neg">−3.7</td><td>Capture (brand + non-brand)</td><td>ROAS improved across H1; absorbs brand demand</td></tr>
-          <tr><td><b>Organic &amp; Social</b></td><td class="num">$248.9K</td><td class="num">62.18%</td><td class="num neg">−4.2</td><td>Acquisition</td><td><b>Under-contributing</b> — the structural gap</td></tr>
-          <tr><td><b>Pinterest</b></td><td class="num">$57.1K</td><td class="num">76.55%</td><td class="num neg">−10.2</td><td>Assist</td><td>Collapsed Mar–Apr; volume + efficiency both weak</td></tr>
-          <tr><td><b>Affluencer</b></td><td class="num">—</td><td class="num">92.72%</td><td class="num neg">−1.9</td><td>Affiliate</td><td>Most efficient channel; small but stable</td></tr>
+          <tr><td><b>Meta</b></td><td class="num">$914.4K</td><td class="num">86.97%</td><td class="num neg">−6.3</td><td>Acquisition + assist</td><td>Biggest engine; new-visitor share slipping toward retargeting</td></tr>
+          <tr><td><b>Klaviyo</b></td><td class="num">$841.4K</td><td class="num">79.22%</td><td class="num pos">+2.4</td><td>Retention / harvest</td><td><b>Only channel lifting new-visitor share</b> — protect it</td></tr>
+          <tr><td><b>Repeat Customer</b></td><td class="num">$722.7K</td><td class="num">—</td><td class="num">—</td><td>Retention</td><td>Loyalty base healthy (RCR 53%)</td></tr>
+          <tr><td><b>Google Ads</b></td><td class="num">$540.3K</td><td class="num">85.17%</td><td class="num neg">−3.7</td><td>Capture (brand + non-brand)</td><td>ROAS improved across H1; absorbs brand demand</td></tr>
+          <tr><td><b>Organic &amp; Social</b></td><td class="num">$234.7K</td><td class="num">62.18%</td><td class="num neg">−4.2</td><td>Acquisition</td><td><b>Under-contributing</b> — the structural gap</td></tr>
+          <tr><td><b>Pinterest</b></td><td class="num">$56.7K</td><td class="num">76.55%</td><td class="num neg">−10.2</td><td>Assist</td><td>Collapsed Mar–Apr; volume + new-visitor share both weak</td></tr>
+          <tr><td><b>Affluencer</b></td><td class="num">$67.3K</td><td class="num">92.72%</td><td class="num neg">−1.9</td><td>Affiliate</td><td>Highest new-visitor share; small but stable</td></tr>
         </tbody>
       </table>
       <p class="fnote">Last-click attribution systematically under-credits organic discovery that later converts via email or direct, so Organic &amp; Social's true acquisition role is larger than $249K implies. Its GSC footprint (Section 04) confirms the weakness is real regardless of attribution.</p>
@@ -395,17 +423,17 @@ footer b{color:var(--ink-soft)}
 
   <section id="revenue">
     <div class="sec-head"><span class="sec-num">06</span><h2>Revenue + Attribution <em>Alignment</em></h2></div>
-    <p class="sec-intro">Where revenue and traffic diverge, and which channels gain vs lose efficiency. NVP (per-channel profit %) is the efficiency lens; Triple Whale Pixel CV is the volume lens.</p>
+    <p class="sec-intro">Where revenue and traffic diverge, and how each channel's intake of new visitors is trending. <b>NVP = Triple Whale's Pixel New Visitor Percent</b> — the share of a channel's pixel-tracked visitors who are <i>new</i> to the site (vs returning). A high NVP means the channel is doing acquisition work; a falling NVP means it is increasingly recycling existing visitors. Triple Whale Pixel CV is the volume lens.</p>
 
     <div class="grid g2">
       <div class="card">
-        <h3>Efficiency (NVP) is softening almost everywhere</h3>
-        <p class="cap">Δ in NVP, Dec'25–May'26 vs prior. Email is the lone gainer.</p>
+        <h3>New-visitor share (NVP) is sliding across acquisition channels</h3>
+        <p class="cap">Δ in Pixel New Visitor Percent, Dec'25–May'26 vs prior. Email is the lone gainer.</p>
         <div class="chart-box"><canvas id="nvpChart"></canvas></div>
-        <p class="fnote">Klaviyo +2.4 stands alone. Pinterest (−10.2) is deteriorating fastest among material channels.</p>
+        <p class="fnote">Klaviyo +2.4 stands alone — every paid and organic acquisition channel is now bringing a <b>smaller</b> share of new visitors, so the top of the funnel is quietly narrowing. This is the acquisition gap showing up in the attribution data, consistent with orders −30%.</p>
       </div>
       <div class="card">
-        <h3>Paid: spend vs attributed efficiency</h3>
+        <h3>Paid: spend vs attributed ROAS</h3>
         <p class="cap">Meta scaled hard in May at its best ROAS; Google steadier and leaner.</p>
         <div class="chart-box"><canvas id="paidChart"></canvas></div>
         <div class="legend">
@@ -418,20 +446,20 @@ footer b{color:var(--ink-soft)}
     </div>
 
     <div class="card" style="margin-top:20px">
-      <h3>Efficiency × Volume — the channel verdict</h3>
-      <p class="cap">Combining both lenses classifies each channel's real role.</p>
+      <h3>New-visitor share × Volume — the channel verdict</h3>
+      <p class="cap">Combining the volume lens (Pixel CV) with the new-visitor lens (NVP) classifies each channel's real role.</p>
       <table>
-        <thead><tr><th>Channel</th><th>Volume trend</th><th>Efficiency trend</th><th>Classification</th></tr></thead>
+        <thead><tr><th>Channel</th><th>Volume trend</th><th>New-visitor share (NVP) Δ</th><th>Classification</th></tr></thead>
         <tbody>
-          <tr><td><b>Klaviyo</b></td><td class="pos">Rising ($107K→$208K)</td><td class="pos">Rising (+2.4)</td><td><b>Gaining efficiency — scale &amp; protect</b></td></tr>
-          <tr><td><b>Meta</b></td><td class="pos">High, scaled in May</td><td class="neg">Softening (−6.3)</td><td>Volume driver; watch CAC as it scales</td></tr>
-          <tr><td><b>Google Ads</b></td><td>Flat-to-up</td><td class="neg">Softening (−3.7)</td><td>Demand capture; absorbs brand searches</td></tr>
+          <tr><td><b>Klaviyo</b></td><td class="pos">Rising ($107K→$208K)</td><td class="pos">Rising (+2.4)</td><td><b>Bringing more new visitors — scale &amp; protect</b></td></tr>
+          <tr><td><b>Meta</b></td><td class="pos">High, scaled in May</td><td class="neg">Falling (−6.3)</td><td>Volume driver; leaning into retargeting over prospecting</td></tr>
+          <tr><td><b>Google Ads</b></td><td>Flat-to-up</td><td class="neg">Falling (−3.7)</td><td>Demand capture; absorbs brand searches</td></tr>
           <tr><td><b>Repeat Customer</b></td><td class="pos">Stable, large</td><td>n/a</td><td>Retention assist — not acquisition</td></tr>
-          <tr><td><b>Organic &amp; Social</b></td><td class="neg">Under-weight</td><td class="neg">Softening (−4.2)</td><td>Should be acquisition; currently the gap</td></tr>
-          <tr><td><b>Pinterest</b></td><td class="neg">Collapsed Mar–Apr</td><td class="neg">Softening (−10.2)</td><td>Volume + efficiency both weak — review</td></tr>
+          <tr><td><b>Organic &amp; Social</b></td><td class="neg">Under-weight</td><td class="neg">Falling (−4.2)</td><td>Should be acquisition; currently the gap</td></tr>
+          <tr><td><b>Pinterest</b></td><td class="neg">Collapsed Mar–Apr</td><td class="neg">Falling (−10.2)</td><td>Volume + new-visitor share both weak — review</td></tr>
         </tbody>
       </table>
-      <p class="fnote">Caveat on the attribution lens: summed Triple Whale channel revenue runs ~32% above Shopify's actual total sales because the same order is credited to several channels at once. Read TW for directional channel mix, and anchor totals to the Shopify ledger.</p>
+      <p class="fnote">Caveat on the attribution lens: across the matched Jan 1 – Jun 7 window, summed Triple Whale channel revenue (~$4.12M) runs ~32% above Shopify's Jan 1 – Jun 8 total sales ($3.13M), because the same order is credited to several channels at once. Read TW for directional channel mix, and anchor totals to the Shopify ledger. (The Jan–May figures above use the same logic for complete months only.)</p>
     </div>
   </section>
 
@@ -442,15 +470,15 @@ footer b{color:var(--ink-soft)}
       <div class="card"><h3 style="color:var(--accent)">What needs work</h3>
         <ul style="list-style:none;display:grid;gap:10px;margin-top:8px;font-size:13.5px;color:var(--ink-soft)">
           <li>• <b>Organic non-brand acquisition</b> — category-page authority and rankings for product/category terms.</li>
-          <li>• <b>Unit economics of paid</b> — softening NVP, with discounts +21% and returns +15% buying volume.</li>
-          <li>• <b>New-customer inflow</b> — the ~30% order decline sits at the top of the funnel, not in the loyal base.</li>
+          <li>• <b>New-visitor inflow</b> — every paid and organic channel is bringing a smaller share of new visitors (NVP down across Meta, Google, Pinterest, Organic), so the top of the funnel is narrowing — consistent with orders −30%.</li>
+          <li>• <b>Margin pressure</b> — discounts +21% and returns +15% are buying volume rather than acquiring it cheaply.</li>
         </ul>
       </div>
       <div class="card"><h3 style="color:var(--pro)">What is working</h3>
         <ul style="list-style:none;display:grid;gap:10px;margin-top:8px;font-size:13.5px;color:var(--ink-soft)">
           <li>• <b>Technical migration</b> — brand + homepage equity transferred; product pages grew.</li>
           <li>• <b>Product-page visibility</b> — recovered and grew (+36% clicks).</li>
-          <li>• <b>Retention &amp; email</b> — RCR 53%; Klaviyo the only channel gaining efficiency.</li>
+          <li>• <b>Retention &amp; email</b> — RCR 53%; Klaviyo the only channel lifting its share of new visitors.</li>
         </ul>
       </div>
     </div>
@@ -501,12 +529,12 @@ footer b{color:var(--ink-soft)}
 
   <footer>
     <p><b>Method.</b> Conclusions are triangulated across ≥2 datasets and labeled <span class="tag evidence">Evidence</span> or <span class="tag hypo">Hypothesis</span>. Shopify order counts are treated as ground truth; Triple Whale figures are directional and over-attribute (~+32% vs ledger). GSC data is the aggregate query/page footprint per domain, used as a clean legacy-vs-current comparison.</p>
-    <p style="margin-top:10px"><b>Sources.</b> Google Search Console (nationltd.com + nation.la, queries &amp; pages) · Triple Whale attribution &amp; NVP (Dec 2025–May 2026) · Shopify Analytics (YTD 2026 vs 2025, referrers &amp; sessions) · Nation LA Topical Authority &amp; Blog Content Plan. Migration: nationltd.com → nation.la, 20 May 2025. June 2026 is a partial month (1–7) in daily series.</p>
+    <p style="margin-top:10px"><b>Sources.</b> Google Search Console (nationltd.com + nation.la, queries &amp; pages) · Triple Whale attribution &amp; NVP (Dec 2025–May 2026) · Shopify Analytics (YTD 2026 vs 2025, referrers &amp; sessions) · Nation LA Topical Authority &amp; Blog Content Plan. Migration: nationltd.com → nation.la, 20 May 2025. The partial June (1–7) is excluded from the channel decomposition (complete months Jan–May 2026); it remains only in the full-window reconciliation against the Shopify ledger.</p>
   </footer>
 </div>
 
 <script>
-const MONTHLY={"months":["Jan","Feb","Mar","Apr","May","Jun*"],"Meta":[159720,105953,178555,169002,301174,32368],"Klaviyo":[107019,153758,182545,190233,207852,24192],"Repeat":[120560,142950,182555,126469,150182,69596],"GoogleAds":[94728,84410,140522,101578,119041,28471],"OrganicSocial":[41684,35378,53983,38414,65272,14156],"Pinterest":[15725,23397,160,222,17167,456],"spend_Meta":[87565,92335,93955,95670,132210,25541],"spend_GoogleAds":[80520,83939,74585,51012,66606,13886]};
+const MONTHLY={"months":["Jan","Feb","Mar","Apr","May"],"Meta":[159720,105953,178555,169002,301174],"Klaviyo":[107019,153758,182545,190233,207852],"Repeat":[120560,142950,182555,126469,150182],"GoogleAds":[94728,84410,140522,101578,119041],"OrganicSocial":[41684,35378,53983,38414,65272],"Pinterest":[15725,23397,160,222,17167],"spend_Meta":[87565,92335,93955,95670,132210],"spend_GoogleAds":[80520,83939,74585,51012,66606]};
 
 const C={meta:'#4A3F33',klav:'#5E7355',rep:'#7A6A5E',goog:'#9A6F4E',org:'#B08A3E',pin:'#CEBFB4',
  accent:'#9A6F4E',pro:'#5E7355',taupe:'#7A6A5E',stone:'#CEBFB4',gold:'#B08A3E',espresso:'#4A3F33',
@@ -519,6 +547,16 @@ const noGrid={grid:{display:false},border:{color:C.line}};
 const gridY={grid:{color:'#ECE5D9'},border:{display:false}};
 
 const mkset=(l,k,c)=>({label:l,data:MONTHLY[k],backgroundColor:c,borderRadius:3,barThickness:34,stack:'s'});
+
+/* Section 02 — composition shift (100% stacked, window-independent) */
+new Chart(mixShiftChart,{type:'bar',data:{labels:['Before · nationltd.com','After · nation.la'],datasets:[
+ {label:'Homepage',data:[33.1,39.2],backgroundColor:C.taupe,borderRadius:3,barThickness:44,stack:'s'},
+ {label:'Collections',data:[46.3,27.6],backgroundColor:C.accent,borderRadius:3,barThickness:44,stack:'s'},
+ {label:'Products',data:[14.9,25.9],backgroundColor:C.pro,borderRadius:3,barThickness:44,stack:'s'},
+ {label:'Info pages',data:[5.7,7.2],backgroundColor:C.stone,borderRadius:3,barThickness:44,stack:'s'}]},
+ options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.x+'% of page clicks'}}},
+ scales:{x:{stacked:true,...gridY,max:100,ticks:{callback:v=>v+'%'}},y:{stacked:true,...noGrid}}}});
+
 new Chart(mixChart,{type:'bar',data:{labels:MONTHLY.months,datasets:[
  mkset('Meta','Meta',C.meta),mkset('Klaviyo','Klaviyo',C.klav),mkset('Repeat','Repeat',C.rep),
  mkset('Google Ads','GoogleAds',C.goog),mkset('Organic & Social','OrganicSocial',C.org),mkset('Pinterest','Pinterest',C.pin)]},
@@ -526,7 +564,7 @@ new Chart(mixChart,{type:'bar',data:{labels:MONTHLY.months,datasets:[
  scales:{x:{stacked:true,...noGrid},y:{stacked:true,...gridY,ticks:{callback:usd}}}}});
 
 new Chart(ownedChart,{type:'doughnut',data:{labels:['Owned / retention / organic (zero media)','Paid-attributed (Meta+Google+Pinterest)'],
- datasets:[{data:[2085366,1572647],backgroundColor:[C.pro,C.espresso],borderColor:C.line,borderWidth:3}]},
+ datasets:[{data:[1972534,1511353],backgroundColor:[C.pro,C.espresso],borderColor:C.line,borderWidth:3}]},
  options:{cutout:'62%',plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:14,boxWidth:8}},
  tooltip:{callbacks:{label:c=>{const t=c.dataset.data.reduce((a,b)=>a+b,0);return c.label.split('(')[0]+': '+usd(c.parsed)+' ('+(c.parsed/t*100).toFixed(0)+'%)';}}}}}});
 
